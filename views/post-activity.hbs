@@ -1,3 +1,6 @@
+{{#contentFor "css"}}
+    <link media="all" href="/css/umeditor.css" rel="stylesheet">
+{{/contentFor}}
 <div class="container m-t-70">
     <div class="row">
         <div class="col-xs-24">
@@ -71,4 +74,8 @@
         </div>
     </div>
 </div>
-{{> scripts entry="post-activity"}}
+{{#contentFor "scripts"}}
+    {{> scripts entry="post-activity"}}
+    <script src="js/lib/umeditor/umeditor.config.js"></script>
+    <script src="js/lib/umeditor/umeditor.js"></script>
+{{/contentFor}}
