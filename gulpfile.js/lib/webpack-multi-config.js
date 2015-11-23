@@ -23,11 +23,6 @@ module.exports = function (env) {
         },
         module: {
             loaders: [
-                {
-                    test: /\.js$/,
-                    loader: 'babel-loader?stage=1',
-                    exclude: /node_modules/
-                },
                 {test: /jquery\.js$/, loader: 'expose?$'},
                 {test: /jquery\.js$/, loader: 'expose?jQuery'},
                 {test: /\.coffee$/, loader: "coffee-loader"},
