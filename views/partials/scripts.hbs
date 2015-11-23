@@ -1,2 +1,7 @@
 <script src="/js/shared.js"></script>
+
+{{#each others}}
+    <script src="/js/{{this}}.js"></script>
+{{/each }}
+
 <script src="/js/{{entry}}.js"></script>
