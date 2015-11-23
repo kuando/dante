@@ -8,7 +8,7 @@
       "proxy": "http://localhost:8080/"
     },
     "js": {
-      "src": "coffee",
+      "src": "scripts",
       "dest": "js",
       "extractSharedJs": true,
       "entries": {
