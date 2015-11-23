@@ -14,7 +14,8 @@
       "entries": {
         "home": "home",
         "register": "register",
-        "login": "login"
+        "login": "login",
+        "post-activity":"post-activity"
       },
       "extensions": [
         "js",

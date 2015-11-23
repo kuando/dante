@@ -3,6 +3,7 @@ body {
     height: 100%!important;
     width: 100%;
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+    background-color: #f5f5f5;
 }
 
 /* Typography */
@@ -450,6 +451,9 @@ ul li{
 
 .m-t-50{
     margin-top: 50px;
+}
+.m-t-70{
+    margin-top: 70px;
 }
 .m-l-135{
     margin-left: 135px;
@@ -1290,40 +1294,16 @@ ul li{
 }
 
 
-/*post*/
-.gradient-green{
-    color: #fff;
-    background-image: -webkit-linear-gradient(top,#aaedb0,#7ce286);
-    background-image: -moz-linear-gradient(top,#aaedb0,#7ce286);
-    background-image: -ms-linear-gradient(top,#aaedb0,#7ce286);
-    background-image: linear-gradient(top,#aaedb0,#7ce286);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#aaedb0, endColorstr=#7ce286)";
+/*post-activity*/
+.create-title{
+    font-size: 16px;
+    position: relative;
+    width: 100px;
+    margin-left: 30px;
+    padding-top: 13px;
+    padding-bottom: 9px;
+    text-align: center;
 }
-.gradient-blue{
-    color: #fff;
-    background-image: -webkit-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: -moz-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: -ms-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: linear-gradient(top,#a9ece7,#01c8d4);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#a9ece7, endColorstr=#01c8d4)";
-}
-.gradient-yellow{
-    color: #fff;
-    background-image: -webkit-linear-gradient(top,#f4e8a6,#eed33f);
-    background-image: -moz-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: -ms-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: linear-gradient(top,#a9ece7,#01c8d4);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#a9ece7, endColorstr=#01c8d4)";
-}
-.gradient-red{
-    color: #fff;
-    background-image: -webkit-linear-gradient(top,#f4acb3,#f37f8a);
-    background-image: -moz-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: -ms-linear-gradient(top,#a9ece7,#01c8d4);
-    background-image: linear-gradient(top,#a9ece7,#01c8d4);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#a9ece7, endColorstr=#01c8d4)";
-}
-
 /* Header */
 
 .navbar {
@@ -1514,7 +1494,7 @@ ul li{
     float: left;
     margin-right: -43px;
     z-index: 1;
-    width: 260px;
+    width: 360px;
     height: 40px;
     padding: 0 10px;
     border: 1px solid #e0e0e0;

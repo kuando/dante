@@ -1,0 +1,74 @@
+<div class="container m-t-70">
+    <div class="row">
+        <div class="col-xs-24">
+            <img src="images/postEventBanner.jpg" width="100%">
+        </div>
+        <div class="col-xs-24 m-t-lg">
+            <div class="bg-white">
+                <div class="create-title bg-success">填写活动信息</div>
+                <form class="form-horizontal m-t-lg">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>填写标题：</label>
+                        <div class="col-xs-20">
+                            <input class="form-control input-lg" type="text" placeholder="请填写活动标题">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>选择时间：</label>
+                        <div class="col-xs-20">
+                            <div class="row">
+                                <div class="col-xs-11">
+                                    <input class="form-control input-lg" type="text" placeholder="开始时间">
+                                    <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                                </div>
+                                <div class="col-xs-2 text-center">
+                                    <span class="glyphicon glyphicon-arrow-right f-gray f-s-24 m-t-xs"></span>
+                                </div>
+                                <div class="col-xs-11">
+                                    <input class="form-control input-lg" type="text" placeholder="结束时间">
+                                    <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">填写地址：</label>
+                        <div class="col-xs-20">
+                            <input class="form-control input-lg" type="text" placeholder="例如：北京海淀区中关村">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">设置封面：</label>
+                        <div class="col-xs-20">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img src="images/poster-cover.png">
+                                </div>
+                                <div class="col-xs-12">
+                                    <button class="btn btn-success btn-lg p-h-xxl">上传</button>
+                                    <a class="m-l-lg">没有准备海报？</a>
+                                    <p class="m-t-lg">温馨提示：</p>
+                                    <p>一张漂亮的海报，能让你的活动锦上添花，带来更多用户报名
+                                        及增加传播效果，也将影响其在活动行App被推荐的几率！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">添加标签：</label>
+                        <div class="col-xs-20">
+                            <button class="btn btn-default"><span class="glyphicon glyphicon-plus f-s-24"></span></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">详细内容：</label>
+                        <div class="col-xs-20">
+                            <div id="myEditor" style="width:1000px;height:240px;"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{> scripts entry="post-activity"}}
