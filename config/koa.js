@@ -13,7 +13,7 @@ const helpers = require('./functions/hbs-helpers');
 const app = koa();
 const viewPath = path.resolve(__dirname, '../views');
 const staticPath = path.resolve(__dirname, '../build');
-require('../models/persisted');
+//require('../models/persisted');
 
 app.use(require('koa-static')(staticPath));
 

@@ -11,6 +11,10 @@ module.exports = function (router) {
 
     router.get('/discovery', function*() {
         yield this.render('discovery');
+    });
+
+    router.get('/post-activity', function*() {
+        yield this.render('post-activity');
     })
 
 };

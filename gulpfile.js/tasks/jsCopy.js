@@ -21,5 +21,5 @@ var jsCopyTask = function () {
         .pipe(browserSync.stream())
 };
 
-gulp.task('copy:js', jsCopyTask);
+gulp.task('jsCopy', jsCopyTask);
 module.exports = jsCopyTask;
