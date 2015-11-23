@@ -21,6 +21,13 @@
         "coffee"
       ]
     },
+    "jsCopy": {
+      "src": "scripts/lib",
+      "dest": "js/lib",
+      "extensions": [
+        "js"
+      ]
+    },
     "css": {
       "src": "css",
       "dest": "css",
