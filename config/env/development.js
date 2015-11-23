@@ -12,6 +12,14 @@ module.exports = {
     app: {
         title: '招生易开发环境'
     },
-    db: {},
+    db: {
+        database: 'db_dante',
+        username: 'postgres',
+        password: 'admin',
+        dialect: 'postgres',
+        define: {
+            updatedAt: false
+        }
+    }
 };
 

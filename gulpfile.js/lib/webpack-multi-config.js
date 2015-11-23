@@ -27,7 +27,8 @@ module.exports = function (env) {
                 {test: /jquery\.js$/, loader: 'expose?jQuery'},
                 {test: /\.coffee$/, loader: "coffee-loader"},
                 {test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate"},
-                {test: /\.css$/, loader: "style-loader!css-loader?root=.."}
+                {test: /\.css$/, loader: "style-loader!css-loader?root=.."},
+                {test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file"}
             ]
         }
     };
