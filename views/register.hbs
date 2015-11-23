@@ -1,0 +1,37 @@
+{{!< loginLayout }}
+<div class="row">
+    <div class="center">
+        <div class="login-box">
+            <form class="m-t-md" method="post" action="" name="phoneForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="姓名" name="user[username]">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="手机号" name="user[phone]">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="user[mobileCode]" id="mobileCode" value=""
+                           placeholder="短信验证码">
+                    <input class="btn-code" type="button" name="" id="btn-code" value="点击获取">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="密码 (6-16位)" name="user[password]">
+                </div>
+                <input class="block submit" type="submit" value="注册">
+
+                <div class="form-group">
+                    <div class="checkbox c-checkbox">
+                        <label class="f-white">
+                            <input type="checkbox" value="">
+                            <span class="fa fa-check"></span>我已阅读并同意《招生易服务使用协议》</label>
+                    </div>
+                </div>
+            </form>
+            <div class="or no-b">
+                <p class="f-white">我已有账号，<a href="/login" class="f-blue">我要登录</a></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+{{> scripts entry = "register"}}

@@ -1,0 +1,77 @@
+{
+  "root": {
+    "src": "./public",
+    "dest": "./build"
+  },
+  "tasks": {
+    "browserSync": {
+      "proxy": "http://localhost:8080/"
+    },
+    "js": {
+      "src": "coffee",
+      "dest": "js",
+      "extractSharedJs": true,
+      "entries": {
+        "home": "home",
+        "register": "register",
+        "login": "login"
+      },
+      "extensions": [
+        "js",
+        "coffee"
+      ]
+    },
+    "css": {
+      "src": "css",
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": [
+          "last 3 version"
+        ]
+      },
+      "extensions": [
+        "css"
+      ]
+    },
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": [
+        "jpg",
+        "png",
+        "svg",
+        "gif"
+      ]
+    },
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": [
+        "woff2",
+        "woff",
+        "eot",
+        "ttf",
+        "svg"
+      ]
+    },
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "generated",
+      "extensions": [
+        "woff2",
+        "woff",
+        "eot",
+        "ttf",
+        "svg"
+      ]
+    },
+    "svgSprite": {
+      "src": "sprites",
+      "dest": "images",
+      "extensions": [
+        "svg"
+      ]
+    }
+  }
+}

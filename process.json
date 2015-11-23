@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "dante-dev",
+      "script": "server.js",
+      "watch": [
+        "config",
+        "controllers",
+        "models"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

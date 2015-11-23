@@ -1,0 +1,333 @@
+body {
+background: #F6F6F6 !important;
+margin: 0 !important;
+font-size: 14px !important;
+font-family: 'Open Sans', Arial, sans-serif;
+}
+.home {
+border-bottom: 3px solid #ddd;
+}
+.container > header {
+margin: 0 auto;
+padding: 10em 0em;
+text-align: center;	
+}
+.container > header h1 {
+font-size: 70px;
+margin: 0;
+font-weight: bold;
+font-family: 'Open Sans', Arial, sans-serif;
+color: #212122;
+}
+.container > header span {
+display: block;
+font-size: 30px;
+color: #89949A;
+font-family: 'Open Sans', Arial, sans-serif;
+width: 100%;
+}
+.smart-body {
+margin-bottom: 20px;
+}
+
+/* Navbar
+=================================================================== */
+.navbar {
+border-radius: 0;
+}
+@media (min-width: 768px) {
+.navbar.open-hover .navbar-nav > .dropdown:hover > .dropdown-menu,
+.navbar.open-hover .navbar-nav > .dropdown > .dropdown-menu:hover {
+display: block;
+margin-top: 0;
+visibility: visible;
+opacity: 1;
+}
+}
+
+/* Form
+=================================================================== */
+.checkbox, .radio {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 20px;
+}
+
+.checkbox ins, .radio ins {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 23px;
+    height: 22px;
+    vertical-align: middle;
+    background: url(http://www.bootcss.com/p/icheck/skins/square/blue.png) no-repeat;
+    margin-right: 8px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    vertical-align: middle;
+}
+
+.radio ins {
+    background-position: -120px 0px;
+}
+
+.radio .hover {
+    background-position: -144px 0px;
+}
+
+.radio .checked {
+    background-position: -168px 0px;
+}
+
+.radio .enable {
+    background-position: -214px 0px;
+}
+
+.radio .disabled {
+    background-position: -191px 0px;
+}
+
+.checkbox span, .radio span {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+/* Panels
+=================================================================== */
+.panel {
+border-radius: 0;
+}
+.panel-heading {
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+/* Nav-Tabs
+=================================================================== */
+.nav-tabs.default.bordered+.tab-content{
+border-top:0;
+min-height:161px;
+-webkit-border-radius:0 0 1px 1px;
+-webkit-background-clip:padding-box;
+-moz-border-radius:0 0 1px 1px;
+-moz-background-clip:padding;
+border-radius:0 0 1px 1px;
+background-clip:padding-box;
+padding:20px;
+margin-bottom:20px;
+background-color:#FFF;
+line-height:24px;
+color:#414142
+}
+
+.nav-tabs.default > li > a{
+margin-right:5px;
+line-height:1.42857143;
+border-radius:1px 1px 0 0;
+color:#212122
+}
+
+.nav-tabs.default > li > a:hover{
+background-color:#fff;
+border: 1px solid #fff;
+border-bottom:solid 1px #dddddd;
+color:#72d26e
+}
+
+.nav-tabs.default > li.active > a{
+background-color:#fff;
+border:none;
+border-bottom:solid 2px #72d26e;
+color:#72d26e
+}
+
+.nav-tabs.primary.bordered+.tab-content{
+border:1px solid #337ab7;
+border-top:0;
+min-height:161px;
+-webkit-border-radius:0 0 1px 1px;
+-webkit-background-clip:padding-box;
+-moz-border-radius:0 0 1px 1px;
+-moz-background-clip:padding;
+border-radius:0 0 1px 1px;
+background-clip:padding-box;
+padding:20px;
+margin-bottom:20px;
+background-color:#337ab7;
+line-height:24px;
+color:#fff
+}
+
+.nav-tabs.primary > li > a{
+margin-right:2px;
+line-height:1.42857143;
+border-radius:1px 1px 0 0;
+background-color:#60c2e8;
+color:#FFF
+}
+
+.nav-tabs.primary > li > a:hover{
+background-color:#286090;
+color:#fff
+}
+
+.nav-tabs.primary > li.active > a{
+background-color:#337ab7;
+border:solid 1px #337ab7;
+color:#fff
+}
+/* Popover & Tooltips
+=================================================================== */
+.popover,
+.popover-title{
+border-radius: 0;
+}
+.tooltip-inner {
+border-radius: 0;
+}
+/* Badge
+=================================================================== */
+.badge{
+display:inline-block;
+min-width:10px;
+padding:4px 6.5px;
+font-size:12px;
+font-weight:700;
+line-height:1;
+color:#FFF;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+background-color:#999;
+border-radius:10px
+}
+.badge.badge-default{
+background-color:#fff;
+color:#212122;
+margin:0 6px
+}
+.badge.badge-dark{
+background-color:#212122;
+color:#fff;
+margin:0 6px
+}
+.badge.badge-success{
+background-color:#5cb85c;
+color:#fff;
+margin:0 6px
+}
+.badge.badge-warning{
+background-color:#f0ad4e;
+color:#fff;
+margin:0 6px
+}
+.badge.badge-danger{
+background-color:#d9534f;
+color:#fff;
+margin:0 6px
+}
+.badge.badge-info{
+background-color:#60C2E8;
+color:#fff;
+margin:0 6px
+}
+.badge.badge-primary{
+background-color:#337ab7;
+color:#fff;
+margin:0 6px
+}
+/* Label
+=================================================================== */
+.label{
+display:inline;
+padding:5px 10px;
+font-size:75%;
+font-weight:400;
+line-height:1;
+background-color:#EBEBEB;
+color:#FFF;
+text-align:center;
+white-space:nowrap;
+vertical-align:baseline;
+border-radius:1px
+}
+.label.label-default{
+background-color:#fff;
+color:#212122
+}
+.label.label-dark{
+background-color:#212122;
+color:#fff
+}
+.label.label-success{
+background-color:#5cb85c;
+color:#fff
+}
+.label.label-warning{
+background-color:#f0ad4e;
+color:#fff
+}
+.label.label-danger{
+background-color:#d9534f;
+color:#fff
+}
+.label.label-info{
+background-color:#60C2E8;
+color:#fff
+}
+.label.label-primary{
+background-color:#337ab7;
+color:#fff
+}
+
+/* Progress bars
+=================================================================== */
+.progress{
+height:20px;
+margin-bottom:20px;
+overflow:hidden;
+background-color:#FFF;
+border-radius:1px
+}
+.animation-sm{
+height:5px
+}
+.animation-md{
+height:12px
+}
+.animation-lg{
+height:20px
+}
+.progress-bar-success{
+background-color:#5cb85c
+}
+.progress-bar-info{
+background-color:#60C2E8
+}
+.progress-bar-warning{
+background-color:#f0ad4e
+}
+.progress-bar-danger{
+background-color:#d9534f
+}
+.progress-bar-primary{
+background-color:#337ab7
+}
+.progress-bar-dark{
+background-color:#212122
+}
+.progress .progress-bar.six-sec-ease-in-out{
+-webkit-transition:width 6s ease-in-out;
+-moz-transition:width 6s ease-in-out;
+-ms-transition:width 6s ease-in-out;
+-o-transition:width 6s ease-in-out;
+transition:width 6s ease-in-out
+}
+
+
