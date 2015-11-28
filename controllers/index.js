@@ -16,6 +16,14 @@ module.exports = function (router) {
 
     router.get('/post-activity', function*() {
         yield this.render('post-activity');
-    })
+    });
+
+    router.get('/user-home', function*() {
+        yield this.render('user-home');
+    });
+
+    router.get('/publish', function*() {
+        yield this.render('publish');
+    });
 
 };

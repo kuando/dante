@@ -15,7 +15,8 @@
         "home": "home",
         "register": "register",
         "login": "login",
-        "post-activity":"post-activity"
+        "post-activity":"post-activity",
+        "publish":"publish"
       },
       "extensions": [
         "js",

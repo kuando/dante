@@ -1095,6 +1095,9 @@ ul li{
     background:url("../images/hd_bg.jpg");
     height: 370px;
 }
+.profile-header .avatar{
+    display: block;
+}
 .profile-header .avatar img{
     width: 150px;
     height: 150px;
@@ -1170,7 +1173,7 @@ ul li{
 /*profile*/
 .user-info{
     border: 1px #dfdfdf solid;
-    margin-bottom: 20px;
+    border-bottom: none;
     background: #fff;
     padding: 0 20px;
     min-height: 90px;
