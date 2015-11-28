@@ -1,10 +1,11 @@
 /**
- * Created by Frank on 15/11/23.
+ * Created by Frank on 15/11/24.
  */
+
 'use strict';
 
 module.exports = function (db, DataTypes) {
-    return db.define("Category", {
+    const Component = db.define("Component", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -18,7 +19,12 @@ module.exports = function (db, DataTypes) {
             }
         }
     }, {
-        tableName: 'tb_category'
+        tableName: 'tb_component',
+        classMethods: {
+            associate: function (models) {
+                Component.belongsTo(models.ComponentGroup, {as: 'componentGroup'});
+            }
+        }
     });
-
+    return Component;
 };

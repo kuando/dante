@@ -9,12 +9,15 @@ module.exports = function (db, DataTypes) {
         gender: {
             type: DataTypes.STRING(2),
             isIn: [['男', '女']]
+        },
+        avatar: {
+            type: DataTypes.STRING
         }
     }, {
         tableName: 'tb_profile',
         classMethods: {
             associate: function (models) {
-                Profile.belongsTo(models.User, {as: 'user'});
+                Profile.belongsTo(models.User);
             }
         }
     });

@@ -5,7 +5,7 @@
 'use strict';
 
 module.exports = function (db, DataTypes) {
-    const Activity = db.define("Activity", {
+    var Activity = db.define("Activity", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -69,16 +69,33 @@ module.exports = function (db, DataTypes) {
         tableName: 'tb_activity',
         classMethods: {
             associate: function (models) {
-                Activity.belongsTo(models.ActivityType, {as: 'tagGroup'});
-                Activity.belongsTo(models.User, {as: 'user'});
+
+                Activity.belongsTo(models.ActivityType);
+
+                Activity.belongsTo(models.User, {
+                    as: 'Author'
+                });
+
                 Activity.belongsToMany(models.User, {
                     as: 'Followers',
-                    foreignKey: 'activityId',
                     through: models.ActivityFollow
-                })
+                });
+
+                Activity.belongsToMany(models.Tag, {
+                    through: models.TagActivity
+                });
+
+                Activity.belongsToMany(models.Category, {
+                    through: models.CategoryActivity
+                });
+
+                Activity.belongsToMany(models.Topic, {
+                    through: models.TopicActivity
+                });
+
+                Activity.hasMany(models.EnrollFields);
             }
         }
     });
-
     return Activity;
 };

@@ -2,8 +2,9 @@
  * Created by Frank on 15/11/23.
  */
 'use strict';
+
 module.exports = function (db, DataTypes) {
-    const Topic = db.define("Topic", {
+    var Category = db.define("Category", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -17,8 +18,15 @@ module.exports = function (db, DataTypes) {
             }
         }
     }, {
-        tableName: 'tb_topic'
+        tableName: 'tb_category',
+        classMethods: {
+            associate: function (models) {
+                Category.belongsToMany(models.Activity, {
+                    through: models.CategoryActivity
+                });
+            }
+        }
     });
 
-    return Topic;
+    return Category;
 };

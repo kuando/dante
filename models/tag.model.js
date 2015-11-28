@@ -4,7 +4,7 @@
 'use strict';
 
 module.exports = function (db, DataTypes) {
-    const Tag = db.define("Tag", {
+    var Tag = db.define("Tag", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -21,7 +21,10 @@ module.exports = function (db, DataTypes) {
         tableName: 'tb_tag',
         classMethods: {
             associate: function (models) {
-                Tag.belongsTo(models.TagGroup, {as: 'tagGroup'});
+                Tag.belongsTo(models.TagGroup);
+                Tag.belongsToMany(models.Activity, {
+                    through: models.TagActivity
+                });
             }
         }
     });
