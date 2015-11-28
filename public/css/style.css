@@ -464,6 +464,9 @@ ul li{
 .m-l-90{
     margin-left: 90px;
 }
+.m-t-n-40{
+    margin-top: -40px;
+}
 .m-t-n-100{
     margin-top: -100px;
 }
@@ -836,6 +839,9 @@ ul li{
     margin-top: 20px;
     border-bottom: 1px #dfdfdf dashed;
 }
+.shadow{
+    box-shadow:0 1px 2px rgba(0,0,0,0.15);
+}
 .div-shadow:hover{
     /*-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);*/
     /*-moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);*/
@@ -1025,6 +1031,12 @@ ul li{
 .tab-list .nav li{
     border: none;
     height: 44px;
+}
+.tab-list .nav > li > a {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    padding: 10px 13px;
 }
 .tab-list .nav-tabs > li {
     float: left;
@@ -1304,6 +1316,207 @@ ul li{
     padding-bottom: 9px;
     text-align: center;
 }
+.labelList ul{
+    width: 1000px;
+}
+.labelList ul li{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    padding-top: 5px;
+    width: 98px;
+    height: 35px;
+    text-align: center;
+    color: #72d26e;
+    background-color: #fff;
+    outline: none;
+    border: 1px dashed #72d26e;
+}
+.labelList ul li:hover {
+    cursor: pointer;
+    border: 1px solid #72d26e;
+    transition: all 0.2s linear;
+}
+.labelList ul li.active {
+    background-color: #72d26e;
+    border: 1px solid #72d26e;
+    color: #fff;
+    transition: all 0.2s linear;
+}
+.labelList input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    -webkit-user-select: none;
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+    -webkit-appearance: none;
+    margin-top: 0;
+}
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 0;
+}
+.labelList input[type="checkbox"]:checked{
+    border-color: #72d26e;
+}
+.labelList input[type=checkbox]:checked:before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #62b651;
+    background-image: url("../images/cloose.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.editor{
+    width: 420px;
+}
+.editor .colorpick{
+    width: 420px;
+    height: 56px;
+    border: 1px solid #dfdfdf;
+    padding: 2px 0 0 4px;
+    margin-bottom: -1px
+}
+.editor .colorpick ul{
+    width: 420px;
+}
+.editor .colorpick ul li {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+}
+.editor .colorpick ul li:hover{
+    -webkit-box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
+    -moz-box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
+    box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
+}
+.editor ul{
+}
+.editor .nav li{
+    border: none;
+    height: 36px;
+}
+.editor .nav-tabs {
+    border-bottom: none;
+}
+.editor .nav > li > a {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    width: 91px;
+    padding: 6px 10px;
+    border: 1px solid #dfdfdf;
+}
+.editor .nav-tabs > li {
+    margin-bottom: -2px;
+}
+.editor .nav-tabs > li > a {
+    color: #666;
+    margin-right: -1px;
+    line-height: 1.64857143;
+    border-radius: 0;
+}
+.editor .nav-tabs > li > a:hover {
+    color: #72d26e;
+}
+.editor .nav-tabs > li.active > a,
+.editor .nav-tabs > li.active > a:hover,
+.editor .nav-tabs > li.active > a:focus {
+    color: #72d26e;
+    border: 1px solid #dfdfdf;
+    border-right: 1px solid #fff;
+    border-radius: 0;
+    cursor: default;
+}
+
+.enrollarea a:focus{
+    text-decoration: none;
+}
+.enrollarea .delete{
+    cursor: pointer;
+}
+.enrollarea .delete:hover{
+    color: #72d26e;
+}
+.enrollarea .add-column{
+    width: 230px;
+    height: 300px;
+}
+.enrollarea .add-column ul{
+    width: 240px;
+}
+.enrollarea .add-column ul li{
+    float: left;
+    text-align: left;
+    margin-top: 10px;
+    margin-right: 7px;
+}
+.enrollarea .add-column ul li button {
+    width: 100px;
+    text-align: left;
+    height: 35px;
+    color: #72d26e;
+    background-color: #fff;
+    outline: none;
+    border: 1px dashed #72d26e;
+}
+.enrollarea .add-column ul li button:hover {
+    background-color: #72d26e;
+    border: 1px solid #72d26e;
+    color: #fff;
+    transition: all 0.2s linear;
+}
+.option .delete{
+    cursor: pointer;
+}
+.option .delete:hover{
+    color: #72d26e;
+}
+.votearea a:focus{
+    text-decoration: none;
+}
+.votearea .option button{
+    height: 35px;
+    color: #72d26e;
+    background-color: #fff;
+    outline: none;
+    border: 1px dashed #72d26e;
+}
+.votearea .option button:hover{
+    background-color: #72d26e;
+    border: 1px solid #72d26e;
+    color: #fff;
+    transition: all 0.2s linear;
+}
+.votearea input[type="radio"]{
+    width: 18px;
+    height: 18px;
+    -webkit-user-select: none;
+    border: 1px solid #c9c9c9;
+    background-color: #fff;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    margin-top: 0;
+}
+.votearea input[type="radio"]:checked{
+    border-color: #72d26e;
+    border-radius: 50%;
+}
+.votearea input[type=radio]:checked:before {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-top: 4px;
+    margin-left: 4px;
+    content: '';
+    border-radius: 50%;
+    background: #72d26e;
+}
 /* Header */
 
 .navbar {
@@ -1494,13 +1707,14 @@ ul li{
     float: left;
     margin-right: -43px;
     z-index: 1;
-    width: 360px;
+    width: 390px;
     height: 40px;
     padding: 0 10px;
     border: 1px solid #e0e0e0;
     font-size: 14px;
     line-height: 40px;
     outline: 0;
+    border-radius: 40px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
@@ -1515,12 +1729,13 @@ ul li{
     background: #fff;
     color: #616161;
     outline: 0;
+    border-radius: 40px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 .search-btn:hover{
-    color: #fff;
-    background: #72d26e;
+    color: #72d26e;
+    border-radius: 40px;
 }
 .search-form:hover .search-text{
     border: 1px solid #72d26e;
@@ -1763,3 +1978,4 @@ ol.linenums {
 .bootstrap-timepicker-widget a {
     text-decoration: none;
 }
+
