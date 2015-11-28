@@ -16,29 +16,53 @@ module.exports = function (opts) {
     return walkRouter(new Router(), directory).routes();
 };
 
+/**
+ * 递归注册路由
+ * @param rootRouter
+ * @param directory
+ * @param base
+ * @returns {*}
+ */
 function walkRouter(rootRouter, directory, base) {
     let files = fs.readdirSync(directory);
+    base = base || '';
     files.forEach(file => {
+        let router = new Router();
         let filePath = path.resolve(directory, file);
-        if (file === 'index.js') {
-            return require(filePath)(rootRouter);
-        }
-        let subRouter = new Router();
+        let prefix = base;
         if (path.extname(file) === '.js') {
-            let prefix = file.slice(0, file.indexOf('.js'));
-            if (base) {
-                prefix = base + '/' + prefix;
+            if (file !== 'index.js') {
+                let basename = path.basename(file, '.js');
+                prefix = prefix === '' ? basename : prefix + '/' + basename;
             }
-            subRouter.prefix('/' + prefix);
-            subRouter = require(filePath)(subRouter);
-            rootRouter.use(subRouter.routes());
-        } else {
+            if (prefix !== '') {
+                router.prefix('/' + prefix);
+            }
+            router = registerRouter(filePath, router);
+            rootRouter.use(router.routes());
+        }
+        else {
             //如果是文件夹,递归调用
-            rootRouter.use('', walkRouter(subRouter, filePath, file).routes());
+            if (fs.statSync(filePath).isDirectory()) {
+                rootRouter.use('', walkRouter(router, filePath, file).routes());
+            }
         }
     });
     return rootRouter;
 }
+
+function registerRouter(filePath, router) {
+    let handler = require(filePath);
+    if ('function' === typeof handler && 'GeneratorFunction' === handler.constructor.name) {
+        router.use(handler);
+        return router;
+    }
+    if ('function' === typeof handler) {
+        handler(router);
+    }
+    return router;
+}
+
 
 
 
