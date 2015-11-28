@@ -16,14 +16,6 @@ module.exports = function (router) {
 
     router.get('/post-activity', function*() {
         yield this.render('post-activity');
-    });
-
-    router.get('/userindex', function*() {
-        yield this.render('userindex');
-    });
-
-    router.get('/pubevents', function*() {
-        yield this.render('pubevents');
     })
 
 };
