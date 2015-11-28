@@ -1553,6 +1553,18 @@ ul li{
 .sign-success a{
     color: #212121;
 }
+.username{
+    width: 80px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin: 0;
+    margin-top: -5px;
+}
 .avatar {
     padding: 0;
     border-radius: 50%;
