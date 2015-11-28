@@ -12,11 +12,11 @@
       "dest": "js",
       "extractSharedJs": true,
       "entries": {
-        "home": "home",
+        "index": "index",
         "register": "register",
         "login": "login",
-        "post-activity":"post-activity",
-        "publish":"publish"
+        "post-activity": "activities/post-activity",
+        "publish": "publish"
       },
       "extensions": [
         "js",
