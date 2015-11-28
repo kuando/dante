@@ -44,4 +44,6 @@ module.exports = function (router) {
             this.redirect('/auth/register');
         }
     });
+
+    return router;
 };
