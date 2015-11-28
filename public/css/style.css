@@ -3,7 +3,7 @@ body {
     height: 100%!important;
     width: 100%;
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f2f2fa;
 }
 
 /* Typography */
@@ -1119,14 +1119,14 @@ ul li{
 }
 
 .profile-left .nav-pills > li > a{
-    color: #9c9c9c;
+    color: #212121;
     border-radius: 0;
 }
 .profile-left .nav-pills > li.active > a,
 .profile-left .nav-pills > li.active > a:hover,
 .profile-left .nav-pills > li.active > a:focus{
     color: #fff;
-    background: #c1e2b3;
+    background: #72d26e;
 }
 
 .profile-left .feature .help,.about{
@@ -1160,17 +1160,17 @@ ul li{
 .profile-left .feature .text{
     float: right;
     font-size: 16px;
-    color: #9c9c9c;
+    color: #212121;
 }
 
 .profile-activity{
-    min-height: 600px;
+    min-height: 608px;
 }
 
 /*profile*/
 .user-info{
     border: 1px #dfdfdf solid;
-    margin-bottom: 20px;
+    border-bottom: none;
     background: #fff;
     padding: 0 20px;
     min-height: 90px;
@@ -1553,7 +1553,7 @@ ul li{
 .sign-success a{
     color: #212121;
 }
-.avatar {
+.navbar .avatar {
     padding: 0;
     border-radius: 50%;
     margin: -20px 0px -15px 10px;
