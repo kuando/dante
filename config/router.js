@@ -59,7 +59,9 @@ function registerRouter(filePath, router) {
     }
     if ('function' === typeof handler) {
         handler(router);
+        return router;
     }
+    console.warn('UnSupported handler type : ', filePath);
     return router;
 }
 
