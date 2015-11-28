@@ -16,6 +16,8 @@ module.exports = function (router) {
 
     router.get('/post-activity', function*() {
         yield this.render('post-activity');
-    })
+    });
+
+    return router;
 
 };
