@@ -5,7 +5,7 @@
 module.exports = function (router) {
 
     router.get('/', function *() {
-        this.body = '选择活动类型';
+        yield this.render('activities/activities');
     });
 
     router.get('/create', function *() {
