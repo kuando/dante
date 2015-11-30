@@ -2,6 +2,7 @@
  * Created by Frank on 15/11/23.
  */
 'use strict';
+const passport = require('koa-passport');
 
 module.exports = function (router) {
 
@@ -24,7 +25,7 @@ module.exports = function (router) {
                 if (err) throw err;
                 if (user === false) {
                     ctx.flash = info;
-                    ctx.redirect('/auth/login');
+                    ctx.redirect('/login');
                 } else {
                     ctx.cookies.set('jwt', user.accessToken(), {signed: true});
                     ctx.redirect('/');
@@ -45,10 +46,10 @@ module.exports = function (router) {
         let user = this.request.body;
         try {
             yield userService.create(user);
-            this.redirect('/auth/login');
+            this.redirect('/login');
         } catch (err) {
             this.flash = {user: user, message: err.message};
-            this.redirect('/auth/register');
+            this.redirect('/register');
         }
     });
 
