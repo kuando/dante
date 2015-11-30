@@ -1,15 +1,11 @@
 $ = require 'jquery/dist/jquery'
-bst = require 'bootstrap/dist/js/bootstrap';
-window.UMEDITOR_HOME_URL = '/js/lib/umeditor/'
-$ ->
-  UM.getEditor('myEditor')
+bst = require 'bootstrap/dist/js/bootstrap'
+tags = require '../partials/tags'
+editor = require('../partials/umEditor')
 
-  $(".labelList").on('click', 'li',
-    ()-> if $(this).siblings('.active').length < 5 || $(this).hasClass('active')
-      $(this).toggleClass("active")
-    else
-      alert("最多选择5个标签！！")
-  );
+$ ->
+  editor.init('weixin') # 初始化编辑器,开启微信模式
+  tags.init('myTag') # 初始化标签
 
   $('.delete').click(
     ()-> $(this).closest(".form-group").remove()
