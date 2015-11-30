@@ -1,486 +1,67 @@
-{{#contentFor "css"}}
-    <link media="all" href="/css/umeditor.css" rel="stylesheet">
-{{/contentFor}}
-<div class="container m-t-70">
-    <div class="row">
-        <div class="col-xs-24">
-            <img src="/images/postEventBanner.jpg" width="100%">
-        </div>
-        <div class="col-xs-24 m-t-lg">
-            <div class="bg-white activity-info shadow">
-                <div class="create-title bg-success">填写活动信息</div>
-                <form class="form-horizontal m-t-lg">
-                    <div class="form-group">
-                        <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>填写标题：</label>
+{{!< activityLayout }}
+<div class="col-xs-24 m-t-lg">
+    <div class="bg-white activity-info shadow">
+        <div class="create-title bg-success">填写活动信息</div>
+        <form class="form-horizontal m-t-lg">
+            <div class="form-group">
+                <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>填写标题：</label>
 
-                        <div class="col-xs-20">
-                            <input class="form-control input-lg" type="text" placeholder="请填写活动标题">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>选择时间：</label>
-
-                        <div class="col-xs-20">
-                            <div class="row">
-                                <div class="col-xs-11">
-                                    <input class="form-control input-lg" type="text" placeholder="开始时间">
-                                    <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
-                                </div>
-                                <div class="col-xs-2 text-center">
-                                    <span class="glyphicon glyphicon-arrow-right f-gray f-s-24 m-t-xs"></span>
-                                </div>
-                                <div class="col-xs-11">
-                                    <input class="form-control input-lg" type="text" placeholder="结束时间">
-                                    <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-3">填写地址：</label>
-
-                        <div class="col-xs-20">
-                            <input class="form-control input-lg" type="text" placeholder="例如：北京海淀区中关村">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-3">设置封面：</label>
-
-                        <div class="col-xs-20">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <img src="/images/poster-cover.png">
-                                </div>
-                                <div class="col-xs-12">
-                                    <button class="btn btn-success btn-lg p-h-xxl">上传</button>
-                                    <a class="m-l-lg">没有准备海报？</a>
-
-                                    <p class="m-t-lg">温馨提示：</p>
-
-                                    <p>一张漂亮的海报，能让你的活动锦上添花，带来更多用户报名
-                                        及增加传播效果，也将影响其在活动行App被推荐的几率！</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-3">添加标签：</label>
-
-                        <div class="col-xs-20 labelList">
-                            <ul class="list-unstyled">
-                                <li>互联网+</li>
-                                <li>软件</li>
-                                <li>物联网</li>
-                                <li>移动互联网</li>
-                                <li>网络营销</li>
-                                <li>大数据</li>
-                                <li>电子商务</li>
-                                <li>云计算</li>
-                                <li>020</li>
-                                <li>通信</li>
-                                <li>互联网金融</li>
-                                <li>硬件</li>
-                                <li>游戏</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-offset-1 col-xs-22">
-                            <div class="row m-b-lg">
-                                <div class="col-xs-10">
-                                    <div class="editor">
-                                        <div class="colorpick">
-                                            <ul class="list-unstyled">
-                                                <li class="myLi" style="background-color: #fff45c;"
-                                                    onmousedown="changeColor(&#39;#fff45c&#39;)"></li>
-                                                <li class="myLi" style="background-color: #fde800;"
-                                                    onmousedown="changeColor('#fde800')"></li>
-                                                <li class="myLi" style="background-color: #ffcb15;"
-                                                    onmousedown="changeColor('#ffcb15')"></li>
-                                                <li class="myLi" style="background-color: #ffa921;"
-                                                    onmousedown="changeColor('#ffa921')"></li>
-                                                <li class="myLi" style="background-color: #ff691f;"
-                                                    onmousedown="changeColor('#ff691f')"></li>
-                                                <li class="myLi" style="background-color: #ff391f;"
-                                                    onmousedown="changeColor('#ff391f')"></li>
-                                                <li class="myLi" style="background-color: #c53f46;"
-                                                    onmousedown="changeColor('#c53f46')"></li>
-                                                <li class="myLi" style="background-color: #d6004a;"
-                                                    onmousedown="changeColor('#d6004a')"></li>
-                                                <li class="myLi" style="background-color: #ff1d6b;"
-                                                    onmousedown="changeColor('#ff1d6b')"></li>
-                                                <li class="myLi" style="background-color: #ff4da9;"
-                                                    onmousedown="changeColor('#ff4da9')"></li>
-                                                <li class="myLi" style="background-color: #ff80c5;"
-                                                    onmousedown="changeColor('#ff80c5')"></li>
-                                                <li class="myLi" style="background-color: #ffb4ce;"
-                                                    onmousedown="changeColor('#ffb4ce')"></li>
-                                                <li class="myLi" style="background-color: #ddf56d;"
-                                                    onmousedown="changeColor('#ddf56d')"></li>
-                                                <li class="myLi" style="background-color: #b0f346;"
-                                                    onmousedown="changeColor('#b0f346')"></li>
-                                                <li class="myLi" style="background-color: #6fe113;"
-                                                    onmousedown="changeColor('#6fe113')"></li>
-                                                <li class="myLi" style="background-color: #87c943;"
-                                                    onmousedown="changeColor('#87c943')"></li>
-                                                <li class="myLi" style="background-color: #129527;"
-                                                    onmousedown="changeColor('#129527')"></li>
-                                                <li class="myLi" style="background-color: #059d7f;"
-                                                    onmousedown="changeColor('#059d7f')"></li>
-                                                <li class="myLi" style="background-color: #00589c;"
-                                                    onmousedown="changeColor('#00589c')"></li>
-                                                <li class="myLi" style="background-color: #4676d9;"
-                                                    onmousedown="changeColor('#4676d9')"></li>
-                                                <li class="myLi" style="background-color: #4e99df;"
-                                                    onmousedown="changeColor('#4e99df')"></li>
-                                                <li class="myLi" style="background-color: #5faaff;"
-                                                    onmousedown="changeColor('#5faaff')"></li>
-                                                <li class="myLi" style="background-color: #3abcff;"
-                                                    onmousedown="changeColor('#3abcff')"></li>
-                                                <li class="myLi" style="background-color: #70d8ff;"
-                                                    onmousedown="changeColor('#70d8ff')"></li>
-                                                <li class="myLi" style="background-color: #cccccc;"
-                                                    onmousedown="changeColor('#cccccc')"></li>
-                                                <li class="myLi" style="background-color: #999999;"
-                                                    onmousedown="changeColor('#999999')"></li>
-                                                <li class="myLi" style="background-color: #666666;"
-                                                    onmousedown="changeColor('#666666')"></li>
-                                                <li class="myLi" style="background-color: #333333;"
-                                                    onmousedown="changeColor('#333333')"></li>
-                                                <li class="myLi" style="background-color: #000000;"
-                                                    onmousedown="changeColor('#000000')"></li>
-                                            </ul>
-                                        </div>
-                                        <ul id="myTab" class="nav nav-tabs pull-left nav-stacked">
-                                            <li class="active"><a href="#tab1" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-pencil m-r-xxs"></span>标题</a></li>
-                                            <li><a href="#tab2" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-file m-r-xxs"></span>正文</a></li>
-                                            <li><a href="#tab3" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-thumbs-up m-r-xxs"></span>关注</a></li>
-                                            <li><a href="#tab4" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-share m-r-xxs"></span>分享</a></li>
-                                            <li><a href="#tab5" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-resize-horizontal m-r-xxs"></span>分割线</a>
-                                            </li>
-                                            <li><a href="#tab6" data-toggle="tab"><span
-                                                    class="glyphicon glyphicon-duplicate m-r-xxs"></span>模板</a>
-                                            </li>
-                                        </ul>
-                                        <div id="changecolor" class="b pull-right p-h-xs"
-                                             style="height: 443px;width: 330px">
-                                            <div id="myTabContent" class="tab-content">
-                                                <div class="tab-pane fade in active" id="tab1">
-
-                                                </div>
-                                                <div class="tab-pane fade" id="tab2">
-                                                    <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
-                                                        Apple
-                                                        TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS
-                                                        是苹果的移动版本。</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="tab3">
-                                                    <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="tab4">
-                                                    <p>Enterprise Java
-                                                        Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web
-                                                        Logic 等）的 J2EE 上。
-                                                    </p>
-                                                </div>
-                                                <div class="tab-pane fade" id="tab5">
-                                                    <p>Enterprise Java
-                                                        Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web
-                                                        Logic 等）的 J2EE 上。
-                                                    </p>
-                                                </div>
-                                                <div class="tab-pane fade" id="tab6">
-                                                    <p>Enterprise Java
-                                                        Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web
-                                                        Logic 等）的 J2EE 上。
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-14">
-                                    <div id="myEditor" style="height: 440px"></div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="col-xs-24">
-            <div class="panel enrollarea shadow" id="enroll">
-                <div class="panel-heading no-p">
-                    <p class="panel-title create-title bg-success">
-                        填写报名信息
-                    </p>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse m-b-lg">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-xs-18">
-                                <p class="p f-s-16">联系方式</p>
-
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>姓名：</label>
-
-                                        <div class="col-xs-21">
-                                            <input class="form-control input-lg" type="text" placeholder="报名者的用户名或昵称"
-                                                   readonly>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>手机：</label>
-
-                                        <div class="col-xs-21">
-                                            <input class="form-control input-lg" type="text" placeholder="报名者的手机号码"
-                                                   readonly>
-                                        </div>
-                                    </div>
-                                    <p class="p f-s-16">附加信息</p>
-
-                                    <div>
-                                        <div class="form-group">
-                                            <label class="control-label col-xs-3">住址：</label>
-
-                                            <div class="col-xs-21">
-                                                <input class="form-control input-lg" type="text" placeholder="请输入你的住址">
-                                                <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-xs-3">邮箱：</label>
-
-                                            <div class="col-xs-21">
-                                                <input class="form-control input-lg" type="text" placeholder="请输入你的邮箱">
-                                                <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-xs-6 m-t-50">
-                                <div class="add-column b p-h-xs p-v-xs">
-                                    <div>
-                                        <p class="f-s-14"><span class="glyphicon glyphicon-th-list m-r-xs"></span>常用栏目
-                                        </p>
-                                    </div>
-                                    <div class="b-t">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-map-marker m-r-xxs"></span>住址
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-envelope m-r-xxs"></span>邮箱
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-ok-circle m-r-xxs"></span>性别
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-equalizer m-r-xxs"></span>身份证号
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-phone m-r-xxs"></span>电话
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-calendar m-r-xxs"></span>生日
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button type="button"><span
-                                                        class="glyphicon glyphicon-heart m-r-xxs"></span>兴趣爱好
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center panel-footer bg-white no-b m-t-n-40">
-                    <a class="addenroll" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        <span class="glyphicon glyphicon-plus f-green m-r-xs"></span>添加报名
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col-xs-24">
-            <div class="panel votearea shadow" id="vote">
-                <div class="panel-heading no-p">
-                    <p class="panel-title create-title bg-success">
-                        创建投票
-                    </p>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse m-b-lg">
-                    <div class="panel-body m-t-lg">
-                        <div class="row">
-                            <div class="col-xs-19">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>投票主题：</label>
-
-                                        <div class="col-xs-20">
-                                            <input class="form-control input-lg" type="text" placeholder="请填写投票主题">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>截止时间：</label>
-
-                                        <div class="col-xs-20">
-                                            <input class="form-control input-lg" type="text" placeholder="截止时间">
-                                            <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group m-b-lg">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>投票选项：</label>
-                                    </div>
-                                    <div class="option">
-                                        <div class="form-group">
-                                            <label class="control-label col-xs-3">选项1：</label>
-
-                                            <div class="col-xs-20">
-                                                <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-xs-3">选项2：</label>
-
-                                            <div class="col-xs-20">
-                                                <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
-                                            </div>
-                                        </div>
-                                        <div class="addoption">
-                                            <div class="form-group">
-                                                <label class="control-label col-xs-3">选项3：</label>
-
-                                                <div class="col-xs-20">
-                                                    <input class="form-control input-lg" type="text"
-                                                           placeholder="请输入选项内容">
-                                                    <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-xs-3"></label>
-
-                                                <div class="col-xs-20">
-                                                    <button type="button" class="btn-block"><span
-                                                            class="glyphicon glyphicon-plus m-r-xs"></span>添加选项
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group m-b-md m-t-md">
-                                        <label class="control-label col-xs-3"><span
-                                                class="f-red m-r-xs">*</span>投票类型：</label>
-
-                                        <div class="col-xs-20">
-                                            <label class="radio-inline">
-                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                                       value="option1">
-                                                <span class="m-r-lg m-l-xs">单选</span>
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                                       value="option2">
-                                                <span class="m-r-lg m-l-xs">多选</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group m-b-lg">
-                                        <label class="control-label col-xs-3">结果说明：</label>
-
-                                        <div class="col-xs-20">
-                                            <textarea class="form-control" rows="4" placeholder="投票后显示（可不填）"></textarea>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center panel-footer bg-white no-b m-t-n-40">
-                    <a class="addVote" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                        <span class="glyphicon glyphicon-plus f-green m-r-xs"></span>添加投票
-                    </a>
+                <div class="col-xs-20">
+                    <input class="form-control input-lg" type="text" placeholder="请填写活动标题">
                 </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>选择时间：</label>
 
-        <div class="col-xs-24">
-            <div class="text-center">
-                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok m-r-xs"></span>发布
-                </button>
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt m-r-xs"></span>预览
-                </button>
+                <div class="col-xs-20">
+                    <div class="row">
+                        <div class="col-xs-11">
+                            <input class="form-control input-lg" type="text" placeholder="开始时间">
+                            <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <span class="glyphicon glyphicon-arrow-right f-gray f-s-24 m-t-xs"></span>
+                        </div>
+                        <div class="col-xs-11">
+                            <input class="form-control input-lg" type="text" placeholder="结束时间">
+                            <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3">填写地址：</label>
+
+                <div class="col-xs-20">
+                    <input class="form-control input-lg" type="text" placeholder="例如：北京海淀区中关村">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-xs-3">设置封面：</label>
+
+                <div class="col-xs-20">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img src="/images/poster-cover.png">
+                        </div>
+                        <div class="col-xs-12">
+                            <button class="btn btn-success btn-lg p-h-xxl">上传</button>
+                            <a class="m-l-lg">没有准备海报？</a>
+
+                            <p class="m-t-lg">温馨提示：</p>
+
+                            <p>一张漂亮的海报，能让你的活动锦上添花，带来更多用户报名
+                                及增加传播效果，也将影响其在活动行App被推荐的几率！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> tags}}
+            {{> umEditor wxEditor=true }}
+        </form>
     </div>
 </div>
-{{#contentFor "scripts"}}
-    {{> scripts entry="post-activity"}}
-    <script src="js/lib/umeditor/umeditor.config.js"></script>
-    <script src="js/lib/umeditor/umeditor.js"></script>
-    <script type="text/javascript">
-        function launchFullscreen(a) {
-            if (a.requestFullscreen) {
-                a.requestFullscreen()
-            } else {
-                if (a.mozRequestFullScreen) {
-                    a.mozRequestFullScreen()
-                } else {
-                    if (a.msRequestFullscreen) {
-                        a.msRequestFullscreen()
-                    } else {
-                        if (a.webkitRequestFullscreen) {
-                            a.webkitRequestFullScreen()
-                        }
-                    }
-                }
-            }
-        }
-        ;
-        var b = ["borderTopColor", "borderRightColor", "borderBottomColor", "borderLeftColor"],
-                d = [];
-        $.each(b,
-                function (a) {
-                    d.push(".itembox .wxqq-" + b[a])
-                });
-        function changeColor(color_value) {
-            $('#changecolor .wxqq-bg').css({'background-color': color_value});
-            $('#changecolor .wxqq-color').css({'color': color_value});
-            $.each(d,
-                    function (g) {
-                        $(d[g]).css(b[g], color_value)
-                    })
 
-        }
-    </script>
-{{/contentFor}}
+{{#content "scripts" mode="prepend"}}
+    {{> scripts entry="post-activity"}}
+{{/content}}
