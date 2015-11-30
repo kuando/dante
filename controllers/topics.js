@@ -9,7 +9,7 @@
 module.exports = function (router) {
 
     router.get('/', function *() {
-        this.body = '专题列表';
+        yield this.render('topics');
     });
 
     router.get('/:topic', function*() {
