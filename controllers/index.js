@@ -3,6 +3,7 @@
  */
 'use strict';
 const passport = require('koa-passport');
+const service = require('../services');
 
 module.exports = function (router) {
 
@@ -45,7 +46,7 @@ module.exports = function (router) {
     router.post('/register', function*() {
         let user = this.request.body;
         try {
-            yield userService.create(user);
+            yield service.user.create(user);
             this.redirect('/login');
         } catch (err) {
             this.flash = {user: user, message: err.message};
