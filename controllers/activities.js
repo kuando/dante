@@ -13,7 +13,7 @@ module.exports = function (router) {
     });
 
     router.get('/:activity', function *() {
-        this.body = '活动详细页面';
+        yield this.render('activities/activities-info');
     });
 
     return router;
