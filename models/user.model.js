@@ -56,7 +56,7 @@ module.exports = function (db, DataTypes) {
         },
 
         resetPasswordToken: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING
         },
 
         resetPasswordExpires: {

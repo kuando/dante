@@ -14,14 +14,12 @@ module.exports = function (db, DataTypes) {
 
         name: {
             type: DataTypes.STRING(128),
-            allowNull: false,
             len: [6, 128]
         },
 
         cover: {
             type: DataTypes.STRING(11),
-            unique: false,
-            allowNull: false
+            unique: false
         },
 
         visitedCount: {
@@ -94,6 +92,10 @@ module.exports = function (db, DataTypes) {
                 });
 
                 Activity.hasMany(models.EnrollFields);
+
+                Activity.hasOne(models.Post);
+
+
             }
         }
     });

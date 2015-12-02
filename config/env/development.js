@@ -15,7 +15,7 @@ module.exports = {
     database: {
         database: 'db_dante',
         username: 'postgres',
-        password: '19930821',
+        password: 'admin',
         dialect: 'postgres',
         pool: {
             max: 1,
@@ -24,6 +24,12 @@ module.exports = {
         define: {
             updatedAt: false
         }
+    },
+    qiniu: {
+        accessKey: 'SPJ9b_qmVxy0FQU-93J4xb5EbHv9Z4Jn_-78f8gr',
+        secretKey: 'NOFnKRTsd1RjjYoyT1qPAgHyczBmAjl-s26GXpA4',
+        bucket: 'resource-hizuoye',
+        visitUrl: '7xlmrh.com1.z0.glb.clouddn.com'
     }
 };
 

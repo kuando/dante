@@ -40,10 +40,11 @@ app.use(hbs.middleware({
     disableCache: true
 }));
 
-//app.use(error());
-app.use(require('../middlewares/auth')());
+app.use(error());
+app.use(require('../middleware/jwt')());
 app.use(router({
     directory: 'controllers'
 }));
+
 
 module.exports = app;

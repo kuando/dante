@@ -1,0 +1,24 @@
+{{#contentFor "css"}}
+    <link media="all" href="/css/umeditor.css" rel="stylesheet">
+{{/contentFor}}
+<div class="form-group">
+    <div class="col-xs-offset-1 col-xs-22">
+        <div class="row m-b-lg">
+            {{# if wxEditor }}
+                {{> componentList }}
+            {{/if}}
+            <div class="{{# if wxEditor }}col-xs-14{{else}}col-xs-24{{/if}}">
+                <div id="umEditor" style="height: 440px"></div>
+            </div>
+            {{#if wxEditor }}
+                <input type="hidden" id="editorMode" value="weixin">
+            {{else}}
+                <input type="hidden" id="editorMode" value="">
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{#content "scripts"}}
+    <script src="/js/lib/umeditor/umeditor.config.js"></script>
+    <script src="/js/lib/umeditor/umeditor.js"></script>
+{{/content}}
