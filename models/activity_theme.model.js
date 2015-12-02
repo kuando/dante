@@ -5,7 +5,7 @@
 'use strict';
 
 module.exports = function (db, DataTypes) {
-    return db.define("ActivityType", {
+    return db.define("ActivityTheme", {
 
         id: {
             type: DataTypes.INTEGER,
@@ -45,7 +45,7 @@ module.exports = function (db, DataTypes) {
             }
         },
 
-        theme: {
+        template: {
             type: DataTypes.STRING(128),
             allowNull: false,
             defaultValue: "post",

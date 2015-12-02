@@ -68,7 +68,7 @@ module.exports = function (db, DataTypes) {
         classMethods: {
             associate: function (models) {
 
-                Activity.belongsTo(models.ActivityType);
+                Activity.belongsTo(models.ActivityTheme);
 
                 Activity.belongsTo(models.User, {
                     as: 'Author'

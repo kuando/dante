@@ -4,24 +4,24 @@
 'use strict';
 const _ = require('lodash');
 const models = require('../../models');
-const ActivityType = models.ActivityType;
+const ActivityTheme = models.ActivityTheme;
 
 module.exports = {
 
     createActivityType: function (data) {
-        return ActivityType.create(data).then(activityType => {
+        return ActivityTheme.create(data).then(activityType => {
             return activityType;
         });
     },
 
     findActivityTypeById: function (id) {
-        return ActivityType.findById(id).then(activityType => {
+        return ActivityTheme.findById(id).then(activityType => {
             return activityType;
         });
     },
 
     findAllActivityTypes: function (filters) {
-        return ActivityType.findAll().then(activityTypes => {
+        return ActivityTheme.findAll().then(activityTypes => {
             return activityTypes;
         });
     }
