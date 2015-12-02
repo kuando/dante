@@ -16,7 +16,8 @@
         "register": "register",
         "login": "login",
         "post-activity": "activities/post-activity",
-        "publish": "publish"
+        "publish": "publish",
+        "activities-info": "activities/activities-info"
       },
       "extensions": [
         "js",
