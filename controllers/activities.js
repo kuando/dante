@@ -8,7 +8,7 @@ const activityService = service.activities;
 module.exports = function (router) {
 
     router.get('/', function *() {
-        this.body = '选择活动类型';
+        yield this.render('activities/activities');
     });
 
     router.get('/create', auth.requireLogin, function *() {
@@ -23,7 +23,7 @@ module.exports = function (router) {
 
 
     router.get('/:activity', function *() {
-        this.body = '活动详细页面';
+        yield this.render('activities/activities-info');
     });
 
 

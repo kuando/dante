@@ -1,17 +1,45 @@
 <div class="container m-t-70">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-xs-24">
+            <div class="profile-header">
+                <div class="">
+                    <div class="text-right">
+                        <a class="btn btn-default m-r-xs m-t-xs">完善个人信息</a>
+                    </div>
+                    <div class="avatar text-center">
+                        <img class="m-t-lg" src="/images/pro-img.jpg">
+                    </div>
+                    <div class="pro-name text-center m-t-lg">
+                        <p class="f-white f-s-18">{{user.username}}</p>
+                        <p class="f-white f-s-16">一句话介绍</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-header-b">
+                <div class="text-center f-white">
+                    <span class="category">
+                        <a href="javascript:void(0)">我关注的<strong>0</strong></a>
+                        <a href="javascript:void(0)">我发布的<strong>0</strong></a>
+                        <a href="javascript:void(0)">我收藏的<strong>0</strong></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container m-t-lg">
+    <div class="row">
+        <div class="col-xs-5">
             <div class="profile-left">
                 <div class="user-info">
-                    <div class="img"><img src="images/pro-img.jpg"></div>
+                    <div class="img"><img src="/images/pro-img.jpg"></div>
                     <span class="username">{{user.username}}</span>
                 </div>
                 <ul class="nav nav-pills nav-stacked b bg-white m-b-xs">
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-tags m-r-xs"></span>我的活动行</a></li>
-                    <li  class="active"><a href="javascript:void(0)"><span class="glyphicon glyphicon-check m-r-xs"></span>我发布的</a></li>
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a></li>
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a></li>
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-cog m-r-xs"></span>账户设置</a></li>
+                    <li class="active"><a href="/home"><span class="glyphicon glyphicon-check m-r-xs"></span>我的招生易</a></li>
+                    <li><a href="/home/following"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a></li>
+                    <li><a href="/home/stars"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a></li>
+                    <li><a href="/home/settings/profile"><span class="glyphicon glyphicon-cog m-r-xs"></span>账户设置</a></li>
                 </ul>
                 <div class="feature">
                     <a>
@@ -35,24 +63,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-19">
+        <div class="col-xs-19">
             <div class="bg-white shadow p-h-lg profile-activity">
                 <div class="row">
-                    <div class="col-md-24">
+                    <div class="col-xs-24">
                         <div class="line">
                             <span class="f-gray f-s-20"><span class="glyphicon glyphicon-check m-r-xs"></span>我发布的</span>
                             <a class="btn btn-success btn-sm pull-right"><span class="glyphicon glyphicon-plus m-r-xs"></span>发布活动</a>
                         </div>
                     </div>
-                    <div class="col-md-24 m-t-lg">
-                        <div class="tips-area hide">
-                            <div class="col-md-offset-5 col-md-15 p-t-120">
-                                <div class="tips-four pull-left"></div>
-                                <a class="f-s-20 m-l-xs">赶快去发现活动！</a>
-                            </div>
-                        </div>
-                        <div>
-                            <ul id="myTab" class="nav nav-tabs">
+                    <div class="col-xs-24 m-t-lg">
+                        <div class="publish-list">
+                            <ul class="nav nav-tabs">
                                 <li class="active">
                                     <a href="#home" data-toggle="tab">
                                         进行中
@@ -61,8 +83,13 @@
                                 <li><a href="#ios" data-toggle="tab">草稿</a></li>
                                 <li><a href="#jmeter" data-toggle="tab">已结束</a></li>
                             </ul>
-                            <div id="myTabContent" class="tab-content">
+                            <div class="tab-content">
                                 <div class="tab-pane fade in active" id="home">
+                                    <div class="tips-area hide">
+                                        <div class="col-md-offset-5 col-md-15 p-t-120">
+                                            <div class="tips-three"></div>
+                                        </div>
+                                    </div>
                                     <div class="underway">
                                         <ul class="list-unstyled">
                                             <li>
@@ -95,9 +122,6 @@
                                 </div>
                                 <div class="tab-pane fade" id="ios">
                                     <div class="tips-area">
-                                        <div class="m-t-n-150 m-r-n-xxl pull-right">
-                                            <div class="tips-two"></div>
-                                        </div>
                                         <div class="col-md-offset-5 col-md-15 p-t-120">
                                             <div class="tips-three"></div>
                                         </div>
@@ -105,9 +129,6 @@
                                 </div>
                                 <div class="tab-pane fade" id="jmeter">
                                     <div class="tips-area">
-                                        <div class="m-t-n-150 m-r-n-xxl pull-right">
-                                            <div class="tips-two"></div>
-                                        </div>
                                         <div class="col-md-offset-5 col-md-15 p-t-120">
                                             <div class="tips-three"></div>
                                         </div>

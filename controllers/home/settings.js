@@ -7,15 +7,14 @@
 module.exports = function (router) {
 
     router.get('/profile', function* () {
-        this.body = '个人信息设置';
+        yield this.render('dashboard/profile');
     });
 
     router.get('/password', function* () {
-        this.body = '密码设置';
-
+        yield this.render('dashboard/password');
     });
     router.get('/bind', function *() {
-        this.body = '第三方绑定';
+        yield this.render('dashboard/bind');
     });
 
     return router;
