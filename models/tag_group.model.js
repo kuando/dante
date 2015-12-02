@@ -5,7 +5,7 @@
 'use strict';
 
 module.exports = function (db, DataTypes) {
-    return db.define("TagGroup", {
+    const TagGroup = db.define("TagGroup", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -19,7 +19,13 @@ module.exports = function (db, DataTypes) {
             }
         }
     }, {
-        tableName: 'tb_tag_group'
+        tableName: 'tb_tag_group',
+        classMethods: {
+            associate: function (models) {
+                TagGroup.hasMany(models.Tag);
+            }
+        }
     });
+    return TagGroup;
 
 };

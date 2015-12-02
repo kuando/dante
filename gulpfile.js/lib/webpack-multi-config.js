@@ -16,21 +16,28 @@ module.exports = function (env) {
 
     var webpackConfig = {
         context: jsSrc,
-        plugins: [],
         resolve: {
             root: jsSrc,
-            extensions: [''].concat(extensions)
+            extensions: [''].concat(extensions),
+            alias: {
+                'bootstrap': 'bootstrap/dist/js/bootstrap'
+            }
         },
         module: {
             loaders: [
-                {test: /jquery\.js$/, loader: 'expose?$'},
-                {test: /jquery\.js$/, loader: 'expose?jQuery'},
+                {test: require.resolve('jquery'), loader: 'expose?jQuery'},
+                {test: require.resolve('jquery'), loader: 'expose?$'},
                 {test: /\.coffee$/, loader: "coffee-loader"},
                 {test: /\.(coffee\.md|litcoffee)$/, loader: "coffee-loader?literate"},
                 {test: /\.css$/, loader: "style-loader!css-loader?root=.."},
                 {test: /\.jpe?g$|\.gif$|\.png$/i, loader: "file"}
             ]
-        }
+        },
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: "jquery"
+            })
+        ]
     };
 
     if (env !== 'test') {

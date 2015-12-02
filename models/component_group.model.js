@@ -16,6 +16,10 @@ module.exports = function (db, DataTypes) {
             isNull: {
                 msg: '名称不能为空'
             }
+        },
+        components: {
+            type: DataTypes.ARRAY(DataTypes.TEXT),
+            defaultValue: []
         }
     }, {
         tableName: 'tb_component_group'
