@@ -12,12 +12,12 @@ module.exports = {
      * @param user
      * @returns {Function|*}
      */
-    createEmptyActivity: function (user, activityType) {
+    createEmptyActivity: function (user, theme) {
         return Activity.findOrCreate({
             where: {
                 status: 0,
                 AuthorId: user.id,
-                ActivityTypeId: activityType.id
+                ActivityThemeId: theme
             }
         }).spread(activity=> {
             return activity;

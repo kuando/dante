@@ -18,6 +18,10 @@ module.exports = function (router) {
         this.body = yield activityService.findActivityTypeById(this.params.id);
     });
 
+    router.del('/:id', function*() {
+        this.body = yield activityService.deleteActivityThemeById(this.params.id);
+    });
+
 
     return router;
 };

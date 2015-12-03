@@ -24,6 +24,13 @@ module.exports = {
         return ActivityTheme.findAll().then(activityTypes => {
             return activityTypes;
         });
-    }
+    },
 
+    deleteActivityThemeById: function (id) {
+        return ActivityTheme.destroy({
+            where: {
+                id: id
+            }
+        });
+    }
 };

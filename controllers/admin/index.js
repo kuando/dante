@@ -7,16 +7,19 @@ const services = require('../../services');
 module.exports = function (router) {
 
     router.get('/', function*() {
-        yield this.render('admin/activityTheme');
+        let themes = yield services.activities.findAllActivityTypes();
+        this.state.message = this.flash && this.flash.message;
+        yield this.render('admin/activityTheme', {themes: themes});
     });
 
     router.post('/themes', function*() {
         try {
             yield services.activities.createActivityType(this.request.body);
+            this.flash = {message: "创建成功"};
         } catch (err) {
-            this.state.err = err.message
+            this.flash = {message: err.message};
         }
-
+        this.redirect('/admin');
     });
 
     return router;

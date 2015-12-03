@@ -3,12 +3,12 @@
         <div class="panel panel-default">
             <div class="panel-heading">活动主题管理</div>
             <div class="panel-body">
-                {{# if error }}
+                {{# if message }}
                     <div class="alert alert-danger" role="alert">
-                        {{error}}
+                        {{message}}
                     </div>
                 {{/if}}
-                <form action="/admin/activityTheme" method="post">
+                <form action="/admin/themes" method="post">
                     <div class="form-group">
                         <label for="name">名称</label>
                         <input type="text" class="form-control" id="name" name="name"/>
@@ -53,6 +53,18 @@
                     <th>修改</th>
                 </tr>
                 </thead>
+                <tbody>
+                {{# each themes}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.description}}</td>
+                        <td>{{this.cover}}</td>
+                        <td>
+                            <button class=" btn btn-remove" id="{{this.id}}">删除</button>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
             </table>
         </div>
     </div>

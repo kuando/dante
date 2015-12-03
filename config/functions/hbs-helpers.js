@@ -18,6 +18,10 @@ module.exports.register = function (hbs) {
         } else {
             hbs.blocks[name] = [...block, content];
         }
-    })
+    });
+
+    hbs.registerHelper('path', function (name) {
+        return "http://7xlmrh.com1.z0.glb.clouddn.com/" + name
+    });
 
 };

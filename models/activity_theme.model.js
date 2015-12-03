@@ -53,7 +53,7 @@ module.exports = function (db, DataTypes) {
         }
 
     }, {
-        tableName: 'tb_activity_type'
+        tableName: 'tb_activity_theme'
     });
 
 };

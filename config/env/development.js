@@ -15,7 +15,7 @@ module.exports = {
     database: {
         database: 'db_dante',
         username: 'postgres',
-        password: '19930821',
+        password: 'admin',
         dialect: 'postgres',
         pool: {
             max: 1,
