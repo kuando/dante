@@ -2,7 +2,7 @@
     <div class="row">
         <!-- 文章内容 -->
         <div class="col-xs-17">
-            <div class="inner bg-white" style="height: 1000px">
+            <div class="inner bg-white">
                 <div class="inner-header">
                     <h1>小米发布红米 Note 3 及小米平板 2</h1>
                     <div class="author text-center">
@@ -30,7 +30,7 @@
                 <div class="inner-body">
 
                 </div>
-                <div class="inner-footer">
+                <div class="inner-footer" id="zan">
                     <div class="zan">
                         <a class="dianzan">赞</a>
                     </div>
@@ -40,8 +40,22 @@
                         <span class="tag-item"><a href="" target="_blank">云计算</a></span>
                         <span class="tag-item"><a href="" target="_blank">软件</a></span>
                     </div>
-                    <div class="share m-t-xxl b-t">
-                        <div class="art-action-favor art-action icon-star"></div>
+                    <div class="share m-t-xxl b-t p-v-lg" id="share">
+                        <div class="stars">
+                            <a class="favorite-btn star-false"><i class="icon-star"></i></a>
+                            <span id="star-counts">7</span>
+                        </div>
+                        <div class="share-list">
+                            <span>分享到</span>
+                            <a class=""><i class="icon-weixin"></i></a>
+                            <a class=""><i class="icon-weibo"></i></a>
+                            <a class=""><i class="icon-qq"></i></a>
+                            <a class=""><i class="icon-douban"></i></a>
+                            <a class=""><i class="icon-renren"></i></a>
+                            <a class=""><i class="icon-facebook"></i></a>
+                            <a class=""><i class="icon-twitter"></i></a>
+                        </div>
+                        <!--<button class="show-notification">111111111</button>-->
                     </div>
                 </div>
             </div>
@@ -231,3 +245,4 @@
         </div>
     </div>
 </div>
+{{> scripts entry="activities-info"}}

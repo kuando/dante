@@ -1,0 +1,22 @@
+<div class="container m-t-70">
+    <div class="row">
+        <div class="col-xs-24 m-t-lg text-center p-h-xs">
+            <p class="f-s-24 f-gray">选择活动类型</p>
+        </div>
+    </div>
+    <div class="row">
+        {{# each themes }}
+            <div class="col-xs-6 m-t-lg p-h-sm">
+                <a class="" href="/activities/create?theme?={{this.id}}">
+                    <div class="div-shadow bg-white center-block text-center p-v-sm p-h-sm">
+                        <p><img src="{{path this.cover}}" width="230"></p>
+
+                        <p class="f-s-16 f-black m-t-lg">{{this.name}}</p>
+
+                        <p class="m-t-xs f-gray">{{this.description}}</p>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>

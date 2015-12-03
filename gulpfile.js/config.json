@@ -16,8 +16,7 @@
         "register": "register",
         "login": "login",
         "post-activity": "activities/post-activity",
-        "publish": "publish",
-        "admin-theme": "admin/admin-theme"
+        "publish": "publish"
       },
       "extensions": [
         "js",
