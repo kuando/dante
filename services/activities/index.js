@@ -6,5 +6,5 @@ const _ = require('lodash');
 
 module.exports = _.extend(
     require('./activity'),
-    require('./activityType')
+    require('./activityTheme')
 );
