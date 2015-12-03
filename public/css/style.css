@@ -1693,21 +1693,30 @@ ul li{
 .editor{
     width: 420px;
 }
-.editor .colorpick{
-    width: 420px;
-    height: 56px;
-    border: 1px solid #dfdfdf;
-    padding: 2px 0 0 4px;
-    margin-bottom: -1px
+.colorpick-w{
+    width: 230px;
+    height: 170px;
 }
-.editor .colorpick ul{
+.editor .colorpick{
+    width: 240px;
+    height: 200px;
+    padding: 2px 0 0 4px;
+    margin-right: -1px;
+    float: left;
+}
+.editor .wx-editor-content{
     width: 420px;
+    height: 442px;
+    border: 1px solid #d4d4d4;
+}
+.editor .colorpick-w .colorpick ul{
+    width: 200px;
 }
 .editor .colorpick ul li {
     width: 18px;
     height: 18px;
     float: left;
-    margin: 3px;
+    margin: 5px 5px;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
 }
@@ -1716,11 +1725,20 @@ ul li{
     -moz-box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
     box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
 }
-.editor ul{
+.template-list{
+    background-color: #fafafa;
+    width: 420px;
+    height: 55px;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+}
+.editor .template-list ul{
 }
 .editor .nav li{
     border: none;
-    height: 36px;
+    height: 24px;
+    margin: 2px 1px 0 1px;
+    text-align: center;
 }
 .editor .nav-tabs {
     border-bottom: none;
@@ -1728,29 +1746,28 @@ ul li{
 .editor .nav > li > a {
     position: relative;
     display: block;
-    font-size: 14px;
-    width: 91px;
-    padding: 6px 10px;
-    border: 1px solid #dfdfdf;
+    font-size: 13px;
+    padding: 2px 10px;
+    border: 1px solid transparent;
+    border-radius: 0;
 }
 .editor .nav-tabs > li {
-    margin-bottom: -2px;
+    margin-bottom: 1px;
 }
 .editor .nav-tabs > li > a {
     color: #666;
-    margin-right: -1px;
-    line-height: 1.64857143;
+    margin-right: 0;
     border-radius: 0;
 }
 .editor .nav-tabs > li > a:hover {
-    color: #72d26e;
+    border: 1px solid #A3BDE3;
+    background: #D5E1F2;
 }
 .editor .nav-tabs > li.active > a,
 .editor .nav-tabs > li.active > a:hover,
 .editor .nav-tabs > li.active > a:focus {
-    color: #72d26e;
-    border: 1px solid #dfdfdf;
-    border-right: 1px solid #fff;
+    border: 1px solid #A3BDE3;
+    background: #D5E1F2;
     border-radius: 0;
     cursor: default;
 }
