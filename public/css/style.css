@@ -1222,15 +1222,6 @@ ul li{
 .inner .inner-footer .share .stars{
     float: left;
 }
-.inner .inner-footer .share a {
-    display: inline-block;
-    margin-left: 10px;
-    position: relative;
-    vertical-align: middle;
-}
-.inner .inner-footer .share a:hover{
-    opacity: 0.8;
-}
 .inner .inner-footer .share i{
     width: 36px;
     height: 36px;
@@ -1248,7 +1239,7 @@ ul li{
     background: #f4f4f4;
     border: solid 1px #e9eaec;
     border-radius: 3px;
-    margin: -18px 0 0 60px;
+    margin: -18px 0 0 50px;
     line-height: 24px;
     color: #666666;
     font-family: arial, sans-serif;
@@ -1271,6 +1262,15 @@ ul li{
     transition: all 0.3s ease;
     white-space: nowrap;
     text-align: right;
+}
+.inner .inner-footer .share .share-list a {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    vertical-align: middle;
+}
+.inner .inner-footer .share .share-list a:hover{
+    opacity: 0.8;
 }
 .share a .icon-star{
     background: #7791b0;
