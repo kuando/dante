@@ -2,18 +2,18 @@
 <div class="col-xs-24 m-t-lg">
     <div class="bg-white activity-info shadow">
         <div class="create-title bg-success">填写活动信息</div>
-        <form class="form-horizontal m-t-lg" id="activityForm">
+        <form class="form-horizontal m-t-lg m-b-lg" id="activityForm">
             <div class="form-group">
                 <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>填写标题：</label>
 
-                <div class="col-xs-20">
+                <div class="col-xs-15">
                     <input class="form-control input-lg" type="text" placeholder="请填写活动标题">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group m-t-lg">
                 <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>选择时间：</label>
 
-                <div class="col-xs-20">
+                <div class="col-xs-15">
                     <div class="row">
                         <div class="col-xs-11">
                             <input class="form-control input-lg form_datetime" type="text" placeholder="开始时间"
@@ -31,26 +31,28 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group m-t-lg">
                 <label class="control-label col-xs-3">填写地址：</label>
 
-                <div class="col-xs-20">
+                <div class="col-xs-15">
                     <input class="form-control input-lg" type="text" placeholder="例如：北京海淀区中关村">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group m-t-lg image-cover">
                 <label class="control-label col-xs-3">设置封面：</label>
 
                 <div class="col-xs-20">
                     <div class="row">
                         <div class="col-xs-12">
+                            <div class="image-group">
                             <img src="/images/poster-cover.png" id="coverPreview">
+                            </div>
                         </div>
-                        <div class="col-xs-12">
+                        <div class="col-xs-12 m-t-50">
                             <input id="file_upload" type="file" name="file"/>
                             <input name="cover" type="hidden" value=""/>
 
-                            <a class="m-l-lg">没有准备海报？</a>
+                            <a class="open-image">没有准备海报？</a>
 
                             <p class="m-t-lg">温馨提示：</p>
 
@@ -63,8 +65,8 @@
             {{> tags/tagList}}
             {{> editor/umEditor wxEditor=true }}
             <div class="form-group">
-                <div class="col-xs-24">
-                    <input class="form-control input-lg" type="button" value="保存" id="saveActivity">
+                <div class="col-xs-offset-3 col-xs-20">
+                    <button type="button" class="btn btn-default pull-right m-b-lg" id="saveActivity">保存</button>
                 </div>
             </div>
         </form>

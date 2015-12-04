@@ -16,7 +16,7 @@ $ ->
       message: "这是一条成功的提示"
     },{
       type:'success'
-      offset: 75
+      offset: 150
       placement: {
         from: "top",
         align: "center"

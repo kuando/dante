@@ -2,13 +2,14 @@
     <link media="all" href="/css/umeditor.css" rel="stylesheet">
 {{/contentFor}}
 <div class="form-group">
-    <div class="col-xs-offset-1 col-xs-22">
+    <label class="control-label col-xs-3"><span class="f-red m-r-xs">*</span>详细内容：</label>
+    <div class="col-xs-20">
         <div class="row m-b-lg">
             {{# if wxEditor }}
                 {{> editor/componentList }}
             {{/if}}
-            <div class="{{# if wxEditor }}col-xs-14{{else}}col-xs-24{{/if}}">
-                <div id="umEditor" style="height: 440px"></div>
+            <div class="{{# if wxEditor }}col-xs-13{{else}}col-xs-24{{/if}}">
+                <div id="umEditor" style="height: 417px"></div>
             </div>
             {{#if wxEditor }}
                 <input type="hidden" id="editorMode" value="weixin">

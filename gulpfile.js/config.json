@@ -17,7 +17,8 @@
         "login": "login",
         "post-activity": "activities/post-activity",
         "publish": "publish",
-        "admin-theme": "admin/admin-theme"
+        "admin-theme": "admin/admin-theme",
+        "activities-info": "activities/activities-info"
       },
       "extensions": [
         "js",
