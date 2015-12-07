@@ -1,6 +1,3 @@
-$ = require 'jquery/dist/jquery'
-
-
 module.exports.init = () ->
   $tagList = $('#partial-tags')
   $tagList.on 'click', 'li', ()->
