@@ -1,3 +1,6 @@
+html{
+    height: 100%
+}
 body {
     position: relative;
     height: 100%!important;
@@ -5,7 +8,11 @@ body {
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
     background-color: #e9eaec;
 }
-
+.wrapper{
+    min-height: 100%;
+    height: 100%;
+    margin-bottom: -220px;
+}
 /* Typography */
 p {
     display: block;
@@ -995,8 +1002,9 @@ ul li{
 .footer{
     background-color: #333;
     color: #C0C0C0;
-    padding:50px 0px;
-    margin-top:20px ;
+    padding:50px 0;
+    height: 220px;
+    clear: both;
 }
 
 /*list*/
