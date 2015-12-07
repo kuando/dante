@@ -25,7 +25,7 @@ Object.keys(daos).forEach((modelName)=> {
         daos[modelName].associate(daos);
     }
 });
-//
+
 //sequelize.sync({force:true}).then(function(){
 //    console.log('database created ');
 //})

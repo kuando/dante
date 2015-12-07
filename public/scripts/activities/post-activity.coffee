@@ -1,24 +1,20 @@
 require 'bootstrap'
 tags = require '../partials/tags'
 editor = require '../partials/editor/umEditor'
-upload = require '../functions/uploadifive'
+cover = require '../partials/cover'
+enroll = require('../partials/enroll')
+vote = require('../partials/vote')
+
 datePicker = require '../functions/datetimepicker.coffee'
 
 $ ->
 
-  # 初始化编辑器
+# 初始化
   editor.init()
-
-  # 初始化标签
-  tags.init('myTag')
-
-  # 初始化图片上传
-  upload.init({
-    file: 'file_upload',
-    preview: 'coverPreview',
-    style: 'cover'
-    done: (ret)-> $('#cover').val ret.key
-  })
+  tags.init()
+  enroll.init()
+  cover.init()
+  vote.init()
 
   # 初始化日期范围控件
   datePicker.timeRange()
@@ -27,13 +23,4 @@ $ ->
     ()-> $(this).closest(".form-group").remove()
   );
 
-  #添加报名
-  $("#enroll").on('click', '.addenroll',
-    ()-> $(this).html('<button class="btn btn-default m-r-xs">保存</button><button class="btn btn-white">取消</button>')
-  );
-
-  #添加投票
-  $("#vote").on('click', '.addVote',
-    ()-> $(this).html('<button class="btn btn-default m-r-xs">保存</button><button class="btn btn-white">取消</button>')
-  );
 
