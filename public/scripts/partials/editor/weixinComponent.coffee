@@ -9,7 +9,7 @@ module.exports.init = (editor)->
 
   $('.colorpick').on 'click', 'li', ()->
     colorValue = $(this).css('background-color')
-    console.log colorValue
+    $(this).closest(".dropdown").find('.bg-color').css('background-color',colorValue)
 
 
 
