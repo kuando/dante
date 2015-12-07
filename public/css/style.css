@@ -1705,6 +1705,11 @@ ul li{
 .editor{
     width: 420px;
 }
+.wx-editor-logo{
+    width: 70px;
+    height: 55px;
+    background: #282d36;
+}
 .wx-editor-content{
     margin-left: 69px;
     border: 1px solid #d4d4d4;
@@ -1714,8 +1719,8 @@ ul li{
 .wx-editor-left-list{
     width: 70px;
     float: left;
-    height: 442px;
-    border-right: 1px solid #d4d4d4;
+    height: 494px;
+    background-color: #282d36;
 }
 .editor .wx-editor-left-list ul{
 }
@@ -1734,37 +1739,38 @@ ul li{
 .editor .wx-editor-left-list .nav > li > a {
     position: relative;
     display: block;
-    height: 81px;
+    height: 80px;
     font-size: 13px;
     padding: 8px 5px;
-    border: 1px solid #d4d4d4;
     border-radius: 0;
 }
 .editor .wx-editor-left-list .nav-tabs > li {
-    margin-bottom: -2px;
-    margin-right: -1px;
+    margin-bottom: 0;
 }
 .editor .wx-editor-left-list .nav-tabs > li > a {
-    color: #666;
+    color: #fff;
     margin-right: 0;
     border-radius: 0;
+    border: none;
 }
 .editor .wx-editor-left-list .nav-tabs > li > a:hover {
-    border: 1px solid #d4d4d4;
-    background: #fff;
+    border: none;
+    background: #424a58;
 }
 .editor .wx-editor-left-list .nav-tabs > li.active > a,
 .editor .wx-editor-left-list .nav-tabs > li.active > a:hover,
 .editor .wx-editor-left-list .nav-tabs > li.active > a:focus {
-    background: #fff;
+    background: #424a58;
     border-radius: 0;
-    color: #5fbeaa;
-    border-right: 1px solid #fff;
+    color: #fff;
+    border: none;
     cursor: default;
 }
 .editor .wx-editor-template-list{
     width: 348px;
-    height: 55px;
+    height: 68px;
+    background: #fafafa;
+    border-bottom: 1px solid #d4d4d4;
 }
 
 .editor .wx-editor-template-content{
@@ -1781,12 +1787,12 @@ ul li{
 .editor .wx-editor-template-list .nav li span{
     display: block;
     line-height: 30px;
-    margin-bottom: 2px;
 }
 .editor .wx-editor-template-list .nav li .bg-color{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    margin-bottom: 5px;
 }
 .editor .wx-editor-template-list .nav-tabs {
     border-bottom: none;
@@ -1795,7 +1801,7 @@ ul li{
     position: relative;
     display: block;
     font-size: 13px;
-    padding: 2px 3px;
+    padding: 6px 3px;
     border: 1px solid transparent;
     border-radius: 0;
 }
@@ -1816,31 +1822,32 @@ ul li{
 .editor .wx-editor-template-list .nav-tabs > li.active > a:focus {
     border-radius: 0;
     cursor: default;
+    background: none;
     border-bottom: 2px solid #5fbeaa;
 }
 .colorpick-w{
     width: 230px;
-    height: 170px;
+    height: 160px;
 }
 .editor .colorpick{
     width: 240px;
-    height: 200px;
-    padding: 2px 0 0 4px;
+    height: 160px;
+    padding: 2px 0 0 2px;
     margin-right: -1px;
     float: left;
 }
-.editor .colorpick-w .colorpick ul{
+.editor .nav .colorpick-w .colorpick ul{
     width: 200px;
 }
-.editor .colorpick ul li {
+.editor .nav .colorpick ul li {
     width: 18px;
     height: 18px;
     float: left;
-    margin: 5px 5px;
+    margin: 5px 6px 8px 0;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
 }
-.editor .colorpick ul li:hover{
+.editor .nav .colorpick ul li:hover{
     -webkit-box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
     -moz-box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;
     box-shadow: 1px 1px 4px #444 inset,0 0 5px #60d0ff;

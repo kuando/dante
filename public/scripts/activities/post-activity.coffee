@@ -32,3 +32,8 @@ $ ->
     ()-> $(this).html('<button class="btn btn-default m-r-xs">保存</button><button class="btn btn-white">取消</button>')
   );
 
+  #添加投票
+  $("#vote").on('click', '.addVote',
+    ()-> $(this).html('<button class="btn btn-default m-r-xs">保存</button><button class="btn btn-white">取消</button>')
+  );
+
