@@ -38,5 +38,26 @@
 </div>
 {{> layouts/footer}}
 {{#block "scripts"}}{{/block}}
+<script type="text/javascript">
+    !function () {
+                t = $(document),
+                l = $(".activities-label-menu"),
+                c = $(".activities-label-list"),
+                v = {count: c.find("li").length},
+                l.on("click", "li", function (e) {
+                    return e.stopPropagation(),
+                            n = $(this),
+                            n.siblings('.active').length < 5 || n.hasClass('active'),
+                            n.hasClass("active") || v.count >= 5 ? void 0 :
+                            (n.addClass("active"),
+                            v[n.html()] = n,
+                            v.count++,
+                            t = $('<li class="fade">\n  ' + $(this).html() + '<span class="glyphicon glyphicon-remove pull-right"></span>\n</li>').appendTo(c),
+                            setTimeout(function () {
+                                return t.addClass("in")
+                            }, 0))
+                })
+    }(this);
+</script>
 </body>
 </html>
