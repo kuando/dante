@@ -3,13 +3,12 @@
  */
 'use strict';
 const _ = require('lodash');
+const config = require('../config');
 module.exports.register = function (hbs) {
     hbs.registerHelper('content', function (name, options) {
-        // fetch block
         let hash = options.hash || {};
         let mode = hash.mode || 'append';
         let block = hbs.blocks[name] || (hbs.blocks[name] = []);
-        // render block and save for layout render
         let content = options.fn(hbs);
         if (mode === 'prepend') {
             hbs.blocks[name] = [content, ...block];
@@ -21,7 +20,9 @@ module.exports.register = function (hbs) {
     });
 
     hbs.registerHelper('path', function (name) {
-        return "http://7xlmrh.com1.z0.glb.clouddn.com/" + name
+        return config.qiniu.visitUrl + name
     });
+
+
 
 };
