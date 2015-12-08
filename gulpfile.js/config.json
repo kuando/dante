@@ -18,7 +18,8 @@
         "post-activity": "activities/post-activity",
         "publish": "publish",
         "admin-theme": "admin/admin-theme",
-        "activities-info": "activities/activities-info"
+        "activities-info": "activities/activities-info",
+        "sideMenu": "partials/sideMenu"
       },
       "extensions": [
         "js",

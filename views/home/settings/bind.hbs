@@ -1,40 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-5">
-            <div class="profile-left">
-                <div class="user-info">
-                    <div class="img"><img src="/images/pro-img.jpg"></div>
-                    <span class="username">{{user.username}}</span>
-                </div>
-                <ul class="nav nav-pills nav-stacked b bg-white m-b-xs">
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-user m-r-xs"></span>个人资料设置</a></li>
-                    <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-lock m-r-xs"></span>修改密码</a></li>
-                    <li class="active"><a href="javascript:void(0)"><span class="glyphicon glyphicon-retweet m-r-xs"></span>帐号绑定</a></li>
-                </ul>
-                <div class="feature">
-                    <a>
-                        <div class="help b">
-                            <div class="img-icon"></div>
-                            <span class="text">使用帮助</span>
-                        </div>
-                    </a>
-                    <a>
-                        <div class="about b">
-                            <div class="img-icon"></div>
-                            <span class="text">关于我们</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="bg-white p-h-sm p-v-sm b text-center f-gray m-b-lg">
-                    <p>你也可以直接拨打电话
-                        或发送邮件联系我们</p>
-                    <p>400-4000-4000</p>
-                    <p>kuando@163.com</p>
-                </div>
-            </div>
-        </div>
+        {{> home/sideMenu bind=true}}
         <div class="col-xs-19">
-            <div class="bg-white p-h-lg profile-activity">
+            <div class="bg-white shadow p-h-lg profile-activity">
                 <div class="row">
                     <div class="col-xs-24">
                         <div class="line">

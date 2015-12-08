@@ -11,8 +11,8 @@ body {
 .wrapper{
     min-height: 100%;
     height:auto;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 /* Typography */
 p {
@@ -1411,7 +1411,7 @@ ul li{
 }
 
 .profile-left .feature .help,.about{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     min-height: 60px;
     line-height: 60px;
     padding: 0 20px;
@@ -2189,6 +2189,20 @@ ul li{
 }
 .search-text:focus,.search-text:hover .search-text{
     border: 1px solid #5fbeaa;
+}
+
+/*定义二级菜单样式*/
+.secondMenu li a {
+    font-size: 13px;
+    color: #4A515B;
+    padding-left: 40px;
+    text-align: left;
+}
+.secondMenu li.active > a,
+.secondMenu li.active > a:hover,
+.secondMenu li.active > a:focus{
+    color: #fff;
+    background: #5fbeaa;
 }
 
 /* Forms */

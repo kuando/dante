@@ -4,7 +4,7 @@
             <div class="img"><img src="/images/pro-img.jpg"></div>
             <span class="username">{{user.username}}</span>
         </div>
-        <ul class="nav nav-pills nav-stacked b bg-white m-b-xs">
+        <ul class="nav nav-pills nav-stacked b bg-white">
             <li {{#if home }} class="active" {{/if}}>
                 <a href="/home"><span class="glyphicon glyphicon-tags m-r-xs"></span>我的招生易</a>
             </li>
@@ -14,11 +14,19 @@
             <li {{#if stars}} class="active" {{/if}}>
                 <a href="/home/stars"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a>
             </li>
-            <li {{#if settings}}{{/if}}>
-                <a href="/home/settings"><span class="glyphicon glyphicon-cog m-r-xs"></span>账户设置</a>
+            <li class="left-menu">
+                <a href="#Setting" data-toggle="collapse">
+                    <span class="glyphicon glyphicon-cog m-r-xs"></span>账户设置
+                    <span class="pull-right glyphicon glyphicon-chevron-down"></span>
+                </a>
+                <ul id="Setting" class="nav nav-list collapse secondMenu">
+                    <li {{#if profile}}class="active"{{/if}}><a href="/home/settings/profile"><span class="glyphicon glyphicon-user m-r-xs"></span>个人资料</a></li>
+                    <li {{#if password}}class="active"{{/if}}><a href="/home/settings/password"><span class="glyphicon glyphicon-lock m-r-xs"></span>修改密码</a></li>
+                    <li {{#if bind}}class="active"{{/if}}><a href="/home/settings/bind"><span class="glyphicon glyphicon-retweet m-r-xs"></span>帐号绑定</a></li>
+                </ul>
             </li>
         </ul>
-        <div class="feature">
+        <div class="feature m-t-md">
             <a>
                 <div class="help b">
                     <div class="img-icon"></div>
@@ -32,7 +40,7 @@
                 </div>
             </a>
         </div>
-        <div class="bg-white p-h-sm p-v-sm b text-center f-gray m-b-lg">
+        <div class="bg-white p-h-sm p-v-sm b text-center f-gray">
             <p>你也可以直接拨打电话
                 或发送邮件联系我们</p>
 
@@ -42,3 +50,4 @@
         </div>
     </div>
 </div>
+{{> scripts entry="sideMenu"}}
