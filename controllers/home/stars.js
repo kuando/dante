@@ -7,7 +7,7 @@
 'use strict';
 module.exports = function (router) {
     router.get('/', function*() {
-        yield this.render('dashboard/stars');
+        yield this.render('home/stars');
     });
     return router;
 };

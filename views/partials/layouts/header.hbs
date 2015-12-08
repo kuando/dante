@@ -84,30 +84,27 @@
                                 class="glyphicon glyphicon-envelope f-s-16"></span><span
                                 class="badge bg-danger m-t-n-lg m-l-n-xxs">4</span></a>
                         <ul class="dropdown-menu dropdown-md">
-                            <li><a href="#"><span class="glyphicon glyphicon-home m-r-xs"></span>个人中心</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-check m-r-xs"></span>我发布的</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-cog m-r-xs"></span>账号设置</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-out m-r-xs"></span>退出</a></li>
+
                         </ul>
                     </li>
                     {{#if user }}
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
                                aria-expanded="false">
                                 <p class="username">{{user.username}}</p>
                                 <span class="caret"></span>
                                 <img class="m-l-xs avatar" src="/images/pro-img.jpg" width="40">
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><span class="glyphicon glyphicon-home m-r-xs"></span>个人中心</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-check m-r-xs"></span>我发布的</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-cog m-r-xs"></span>账号设置</a></li>
-                                <li><a href="/logout"><span class="glyphicon glyphicon-log-out m-r-xs"></span>退出</a>
+                                <li><a href="/home"><span class="glyphicon glyphicon-home m-r-xs"></span>个人中心</a></li>
+                                <li><a href="/home/following"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a>
                                 </li>
+                                <li><a href="/home/stars"><span
+                                        class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a></li>
+                                <li><a href="/home/settings"><span class="glyphicon glyphicon-cog m-r-xs"></span>账号设置</a>
+                                </li>
+                                <li><a href="/logout"><span class="glyphicon glyphicon-log-out m-r-xs"></span>退出</a></li>
                             </ul>
                         </li>
                     {{/if}}
