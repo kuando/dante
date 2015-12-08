@@ -7,7 +7,7 @@
 module.exports = function (router) {
 
     router.get('/', function*() {
-        yield this.render('dashboard/following');
+        yield this.render('home/following');
     });
 
     return router;

@@ -7,14 +7,16 @@
 module.exports = function (router) {
 
     router.get('/profile', function* () {
-        yield this.render('dashboard/profile');
+        yield this.render('home/settings/profile');
     });
 
+
     router.get('/password', function* () {
-        yield this.render('dashboard/password');
+        yield this.render('home/settings/password');
     });
+
     router.get('/bind', function *() {
-        yield this.render('dashboard/bind');
+        yield this.render('home/settings/bind');
     });
 
     return router;
