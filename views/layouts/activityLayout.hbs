@@ -8,7 +8,6 @@
     <link media="all" href="/css/non-responsive.css" rel="stylesheet">
     <link media="all" href="/css/style.css" rel="stylesheet">
     <link media="all" href="/css/uploadifive.css" rel="stylesheet">
-
     {{#block "css"}}{{/block}}
     <!--[if lt IE 8]>
     <script src="/js/respond.js" type="text/javascript"></script>
@@ -24,12 +23,13 @@
             {{> enroll }}
             {{> vote }}
             <input type="hidden" value="{{activity.id}}">
-
             <div class="col-xs-24">
                 <div class="text-center">
-                    <button type="button" class="btn btn-pink m-r-sm"><span class="glyphicon glyphicon-ok m-r-xs"></span>预览&发布
+                    <button type="button" class="btn btn-pink m-r-sm"><span
+                            class="glyphicon glyphicon-ok m-r-xs"></span>预览&发布
                     </button>
-                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list-alt m-r-xs"></span>另存为草稿
+                    <button type="button" class="btn btn-default"><span
+                            class="glyphicon glyphicon-list-alt m-r-xs"></span>另存为草稿
                     </button>
                 </div>
             </div>
@@ -38,25 +38,5 @@
 </div>
 {{> layouts/footer}}
 {{#block "scripts"}}{{/block}}
-<!--<script type="text/javascript">-->
-    <!--!function () {-->
-                <!--t = $(document),-->
-                <!--l = $(".activities-label-menu"),-->
-                <!--c = $(".activities-label-list"),-->
-                <!--v = {count: c.find("li").length},-->
-                <!--l.on("click", "li", function (e) {-->
-                    <!--return e.stopPropagation(),-->
-                            <!--n = $(this),-->
-                            <!--n.siblings('.active').length < 5 || n.hasClass('active'),-->
-                            <!--n.hasClass("active") || v.count >= 5 ? void 0 : (n.addClass("active"),-->
-                            <!--v[n.html()] = n,-->
-                            <!--v.count++,-->
-                            <!--t = $('<li class="fade">\n  ' + $(this).html() + '<span class="glyphicon glyphicon-remove pull-right"></span>\n</li>').appendTo(c),-->
-                            <!--setTimeout(function () {-->
-                                <!--return t.addClass("in")-->
-                            <!--}, 0))-->
-                <!--})-->
-    <!--}(this);-->
-<!--</script>-->
 </body>
 </html>

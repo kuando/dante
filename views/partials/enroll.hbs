@@ -5,11 +5,12 @@
                 填写报名信息
             </p>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse m-b-lg">
+        <div id="enrollCollapse" class="panel-collapse collapse m-b-lg">
             <div class="panel-body">
                 <div class="row m-b-md">
                     <div class="col-xs-18">
                         <p class="p f-s-16 m-l-md">联系方式<span class="m-l-lg f-red">(报名用户填写资料，必填)</span></p>
+
                         <form class="form-horizontal">
                             <div class="form-group">
                                 <label class="control-label col-xs-4"><span
@@ -30,67 +31,47 @@
                                 </div>
                             </div>
                             <p class="p f-s-16 m-l-md">附加信息</p>
-                            <div>
-                                <div class="form-group">
-                                    <label class="control-label col-xs-4">住址：</label>
 
-                                    <div class="col-xs-20">
-                                        <input class="form-control input-lg" type="text" placeholder="请输入你的住址">
-                                        <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-xs-4">邮箱：</label>
+                            <div class="enroll-extras">
 
-                                    <div class="col-xs-20">
-                                        <input class="form-control input-lg" type="text" placeholder="请输入你的邮箱">
-                                        <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                    </div>
-                                </div>
                             </div>
                         </form>
                     </div>
                     <div class="col-xs-6 m-t-50">
                         <div class="add-column b p-h-xs p-v-xs">
                             <div>
-                                <p class="f-s-14"><span class="glyphicon glyphicon-th-list m-r-xs"></span>常用栏目
-                                </p>
+                                <p class="f-s-14"><span class="glyphicon glyphicon-th-list m-r-xs"></span>常用栏目</p>
                             </div>
                             <div class="b-t">
                                 <ul class="list-unstyled">
                                     <li>
-                                        <button type="button"><span
-                                                class="glyphicon glyphicon-map-marker m-r-xxs"></span>住址
+                                        <button type="button" class="enroll-field-btn">
+                                            <span class="glyphicon glyphicon-map-marker m-r-xxs"></span>住址
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button"><span
+                                        <button type="button" class="enroll-field-btn"><span
                                                 class="glyphicon glyphicon-envelope m-r-xxs"></span>邮箱
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button"><span
+                                        <button type="button" class="enroll-field-btn"><span
                                                 class="glyphicon glyphicon-ok-circle m-r-xxs"></span>性别
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button"><span
+                                        <button type="button" class="enroll-field-btn"><span
                                                 class="glyphicon glyphicon-equalizer m-r-xxs"></span>身份证号
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button"><span
-                                                class="glyphicon glyphicon-phone m-r-xxs"></span>电话
+                                        <button type="button" class="enroll-field-btn">
+                                            <span class="glyphicon glyphicon-phone m-r-xxs"></span>电话
                                         </button>
                                     </li>
                                     <li>
-                                        <button type="button"><span
-                                                class="glyphicon glyphicon-calendar m-r-xxs"></span>生日
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button type="button"><span
-                                                class="glyphicon glyphicon-heart m-r-xxs"></span>兴趣爱好
+                                        <button type="button" class="enroll-field-btn">
+                                            <span class="glyphicon glyphicon-heart m-r-xxs"></span>兴趣爱好
                                         </button>
                                     </li>
                                 </ul>
@@ -101,7 +82,7 @@
             </div>
         </div>
         <div class="text-center panel-footer bg-white no-b m-t-n-40">
-            <a class="addenroll" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <a class="addenroll" data-toggle="collapse" data-parent="#accordion" href="#enrollCollapse">
                 <span class="glyphicon glyphicon-plus f-green m-r-xs"></span>添加报名
             </a>
         </div>

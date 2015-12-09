@@ -5,94 +5,89 @@
                 创建投票
             </p>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse m-b-lg">
+        <div id="voteCollapse" class="panel-collapse collapse m-b-lg">
             <div class="panel-body m-t-lg">
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <label class="control-label col-xs-3"><span
-                                        class="f-red m-r-xs">*</span>投票主题：</label>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3"><span
+                                class="f-red m-r-xs">*</span>投票主题：</label>
 
-                                <div class="col-xs-15">
-                                    <input class="form-control input-lg" type="text" placeholder="请填写投票主题">
-                                </div>
+                        <div class="col-xs-15">
+                            <input class="form-control input-lg" type="text" placeholder="请填写投票主题">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3"><span
+                                class="f-red m-r-xs">*</span>截止时间：</label>
+
+                        <div class="col-xs-15">
+                            <input class="form-control input-lg" type="text" placeholder="截止时间">
+                            <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-lg">
+                        <label class="control-label col-xs-3"><span
+                                class="f-red m-r-xs">*</span>投票选项：</label>
+                    </div>
+                    <div class="option">
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">选项1：</label>
+
+                            <div class="col-xs-15">
+                                <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">选项2：</label>
+
+                            <div class="col-xs-15">
+                                <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
+                            </div>
+                        </div>
+                        <div class="addoption">
+                            <div class="vote-extras">
+
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-xs-3"><span
-                                        class="f-red m-r-xs">*</span>截止时间：</label>
+                                <label class="control-label col-xs-3"></label>
 
                                 <div class="col-xs-15">
-                                    <input class="form-control input-lg" type="text" placeholder="截止时间">
-                                    <span class="glyphicon glyphicon-time form-control-feedback f-gray f-s-20"></span>
+                                    <button type="button" class="btn-block add-vote-option-btn">
+                                        <span class="glyphicon glyphicon-plus m-r-xs"></span>添加选项
+                                    </button>
                                 </div>
                             </div>
-                            <div class="form-group m-b-lg">
-                                <label class="control-label col-xs-3"><span
-                                        class="f-red m-r-xs">*</span>投票选项：</label>
-                            </div>
-                            <div class="option">
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">选项1：</label>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-md m-t-md">
+                        <label class="control-label col-xs-3"><span
+                                class="f-red m-r-xs">*</span>投票类型：</label>
 
-                                    <div class="col-xs-15">
-                                        <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">选项2：</label>
+                        <div class="col-xs-15">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                       value="option1">
+                                <span class="m-r-lg m-l-xs">单选</span>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                       value="option2">
+                                <span class="m-r-lg m-l-xs">多选</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-md">
+                        <label class="control-label col-xs-3">结果说明：</label>
 
-                                    <div class="col-xs-15">
-                                        <input class="form-control input-lg" type="text" placeholder="请输入选项内容">
-                                    </div>
-                                </div>
-                                <div class="addoption">
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3">选项3：</label>
-
-                                        <div class="col-xs-15">
-                                            <input class="form-control input-lg" type="text"
-                                                   placeholder="请输入选项内容">
-                                            <span class="delete glyphicon glyphicon-trash f-gray f-s-16 pull-right m-t-n-xxl m-r-xs"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-xs-3"></label>
-
-                                        <div class="col-xs-15">
-                                            <button type="button" class="btn-block"><span
-                                                    class="glyphicon glyphicon-plus m-r-xs"></span>添加选项
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group m-b-md m-t-md">
-                                <label class="control-label col-xs-3"><span
-                                        class="f-red m-r-xs">*</span>投票类型：</label>
-
-                                <div class="col-xs-15">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                               value="option1">
-                                        <span class="m-r-lg m-l-xs">单选</span>
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                               value="option2">
-                                        <span class="m-r-lg m-l-xs">多选</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group m-b-md">
-                                <label class="control-label col-xs-3">结果说明：</label>
-                                <div class="col-xs-15">
-                                    <textarea class="form-control" rows="4" placeholder="投票后显示（可不填）"></textarea>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="col-xs-15">
+                            <textarea class="form-control" rows="4" placeholder="投票后显示（可不填）"></textarea>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="text-center panel-footer bg-white no-b m-t-n-40">
-            <a class="addVote" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <a class="addVote" data-toggle="collapse" data-parent="#accordion" href="#voteCollapse">
                 <span class="glyphicon glyphicon-plus f-green m-r-xs"></span>添加投票
             </a>
         </div>

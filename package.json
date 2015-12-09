@@ -45,6 +45,7 @@
     "pg-hstore": "^2.3.2",
     "qiniu": "^6.1.8",
     "require-dir": "^0.3.0",
+    "select2-bootstrap-css": "^1.4.6",
     "sequelize": "^3.14.1",
     "walk": "^2.3.9"
   },

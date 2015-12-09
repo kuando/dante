@@ -37,6 +37,7 @@ module.exports = function (env) {
             new webpack.ProvidePlugin({
                 $: "jquery"
             })
+
         ]
     };
 
