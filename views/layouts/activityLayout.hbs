@@ -22,10 +22,11 @@
             {{{ body }}}
             {{> enroll }}
             {{> vote }}
-            <input type="hidden" value="{{activity.id}}">
+            <input type="hidden" value="{{activity.id}}" id="currentActivity">
+
             <div class="col-xs-24">
                 <div class="text-center">
-                    <button type="button" class="btn btn-pink m-r-sm"><span
+                    <button type="button" class="btn btn-pink m-r-sm preview-btn"><span
                             class="glyphicon glyphicon-ok m-r-xs"></span>预览&发布
                     </button>
                     <button type="button" class="btn btn-default"><span

@@ -21,9 +21,6 @@ module.exports = function (db, DataTypes) {
             type: DataTypes.STRING(11),
             unique: false
         },
-        extras: {
-            type: DataTypes.JSON
-        },
 
         visitedCount: {
             type: DataTypes.INTEGER,
