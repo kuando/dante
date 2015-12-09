@@ -21,7 +21,7 @@ p {
     font-weight: normal;
     letter-spacing: normal;
     line-height: 22px;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
     font-style: normal;
     white-space: normal;
 }
@@ -1013,6 +1013,11 @@ ul li{
 .footer h3{
     color: #fff;
 }
+.footer a{
+    color: #b1d1e8;
+    display: block;
+    margin: 10px;
+}
 /*list*/
 /*筛选*/
 .filtration{
@@ -1517,6 +1522,23 @@ ul li{
     text-overflow: ellipsis;
     white-space: nowrap;
     display: inline-block;
+}
+.setting-avatar{
+    border-radius: 50%;
+}
+.bind{
+    height: 200px;
+    width: 160px;
+    margin: 0 auto;
+    padding: 25px 10px;
+    border-radius: 5px;
+}
+.bind img{
+    width: 70px;
+    height: 70px;
+}
+.bind p{
+    font-size: 12px;
 }
 
 /*pubevents*/
