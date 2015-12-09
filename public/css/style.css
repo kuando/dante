@@ -1001,12 +1001,18 @@ ul li{
 
 
 .footer{
-    background-color: #333;
+    background-color: #2d3237;
     color: #C0C0C0;
-    padding:50px 0;
+    padding-top: 25px;
     height: 220px;
 }
-
+.copyright{
+    height: 60px;
+    background: #23282d;
+}
+.footer h3{
+    color: #fff;
+}
 /*list*/
 /*筛选*/
 .filtration{
@@ -1411,17 +1417,14 @@ ul li{
 }
 
 .profile-left .feature .help,.about{
-    margin-bottom: 20px;
     min-height: 60px;
+    border-bottom: 1px solid #dfdfdf;
     line-height: 60px;
     padding: 0 20px;
     background: #fff;
 }
 .profile-left .feature .help:hover,.about:hover{
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-    -webkit-transition: all 0.2s linear;
+    background: #eeeeee;
     transition: all 0.2s linear;
 }
 .profile-left .feature .help .img-icon{
@@ -1444,8 +1447,8 @@ ul li{
     color: #212121;
 }
 
-.profile-activity{
-    min-height: 600px;
+.user-main-h{
+    min-height: 670px;
 }
 .publish-list ul li{
 
@@ -1493,8 +1496,6 @@ ul li{
 
 /*profile*/
 .user-info{
-    border: 1px #dfdfdf solid;
-    border-bottom: none;
     background: #fff;
     padding: 0 20px;
     min-height: 90px;
