@@ -10,15 +10,18 @@ module.exports = function (db, DataTypes) {
             autoIncrement: true,
             primaryKey: true
         },
-        startTime: {
-            type: DataTypes.DATE
+        extras: {
+            type: DataTypes.JSON
         },
-        endTime: {
-            type: DataTypes.DATE
-        },
-        address: {
-            type: DataTypes.STRING(128)
-        },
+        //startTime: {
+        //    type: DataTypes.DATE
+        //},
+        //endTime: {
+        //    type: DataTypes.DATE
+        //},
+        //address: {
+        //    type: DataTypes.STRING(128)
+        //},
         content: {
             type: DataTypes.TEXT
         }
