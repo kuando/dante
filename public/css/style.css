@@ -6,7 +6,7 @@ body {
     height: 100%!important;
     width: 100%;
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-    background-color: #e9eaec;
+    background-color: #f2f5f8;
 }
 .wrapper{
     min-height: 100%;
@@ -837,8 +837,8 @@ ul li{
 .h-82{
     height: 82px;
 }
-.h-172{
-    height: 172px;
+.h-184{
+    height: 184px;
 }
 /*header*/
 .navbar-header-top{
@@ -982,9 +982,9 @@ ul li{
 }
 
 .past-activities ul li{
-    height: 95px;
-    padding: 0px 10px 0px 10px;
-    margin-bottom: 15px;
+    height: 99px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
     border: 1px solid #dfdfdf;
     border-left:5px solid #61d482 ;
 }
@@ -1004,7 +1004,7 @@ ul li{
     background-color: #2d3237;
     color: #C0C0C0;
     padding-top: 25px;
-    height: 220px;
+    height: 280px;
 }
 .copyright{
     height: 60px;
@@ -1012,11 +1012,33 @@ ul li{
 }
 .footer h3{
     color: #fff;
+    margin-bottom: 20px;
+}
+.footer .footer-logo{
+    height: 20px;
+    margin-right: 10px;
+    margin-top: -10px
+}
+.footer .message-email{
+    color: #5fbeaa;
 }
 .footer a{
-    color: #b1d1e8;
+    opacity: 0.7;
+}
+.footer a:hover{
+    opacity: 1;
+}
+.footer .links a{
+    color: #5fbeaa;
     display: block;
     margin: 10px;
+}
+.footer .partner-link a{
+    display: inline-block;
+    margin: 10px;
+}
+.footer .partner-link img{
+    height: 25px;
 }
 /*list*/
 /*筛选*/
@@ -1388,6 +1410,7 @@ ul li{
     display: block;
 }
 .profile-header .avatar img{
+    margin-top: 50px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -1453,7 +1476,7 @@ ul li{
 }
 
 .user-main-h{
-    min-height: 670px;
+    min-height: 665px;
 }
 .publish-list ul li{
 
@@ -1532,6 +1555,7 @@ ul li{
     margin: 0 auto;
     padding: 25px 10px;
     border-radius: 5px;
+    box-shadow:0 1px 2px rgba(0,0,0,0.15);
 }
 .bind img{
     width: 70px;
@@ -1754,12 +1778,12 @@ ul li{
     margin-left: 69px;
     border: 1px solid #d4d4d4;
     width: 350px;
-    height: 494px;
+    height: 572px;
 }
 .wx-editor-left-list{
     width: 70px;
     float: left;
-    height: 494px;
+    height: 572px;
     background-color: #282d36;
 }
 .editor .wx-editor-left-list ul{
@@ -1808,14 +1832,23 @@ ul li{
 }
 .editor .wx-editor-template-list{
     width: 348px;
-    height: 68px;
-    background: #fafafa;
+    height: 69px;
     border-bottom: 1px solid #d4d4d4;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+    background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+    background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    background-repeat: repeat-x;
+    /*border: 1px solid #d4d4d4;*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+    *zoom: 1;
 }
 
 .editor .wx-editor-template-content{
     width: 348px;
-    height: 442px;
+    height: 500px;
 }
 .editor .wx-editor-template-list ul{
 }
@@ -2511,6 +2544,9 @@ input[type=radio]:checked:before {
     border: 1px solid #fb6d9d !important;
     color: #ffffff;
 }
+.btn:hover{
+    opacity: 0.8;
+}
 .open > .dropdown-toggle.btn-primary.btn-custom,
 .open > .dropdown-toggle.btn-success.btn-custom,
 .open > .dropdown-toggle.btn-info.btn-custom,
@@ -2583,18 +2619,19 @@ input[type=radio]:checked:before {
     border-radius: 5px;
     -moz-border-radius: 5px;
     background-clip: padding-box;
-    border-width: 2px !important;
+    border-width: 1px !important;
     font-weight: 600;
     transition: all 400ms ease-in-out;
     background-clip: inherit;
 }
 .btn-custom:hover {
     color: #ffffff !important;
-    border-width: 2px !important;
+    border-width: 1px !important;
+    opacity: 1;
 }
 .btn-custom:focus {
     color: #ffffff !important;
-    border-width: 2px !important;
+    border-width: 1px !important;
 }
 .btn-label {
     background: rgba(0, 0, 0, 0.05);

@@ -1,42 +1,32 @@
 body {
+    position: relative;
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-    background: url("../images/login_bg.jpg") no-repeat fixed transparent;
-    background-size:cover;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
+    background: #5fbeaa;
 }
 .center{
     width: 100%;
-    position: fixed;
-    top: 50%;
-    margin-top: -250px;
 }
 .login-box{
     width: 330px;
     margin: 0 auto;
-    background: rgba(0,0,0,.25);  /*支持rgba的浏览器*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000);    /*IE8支持*/
+    background: #fff;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -o-border-radius: 8px;
+    border-radius: 3px;
 }
 .logo-name{
     font-weight: normal;
-    color: #fff;
+    color: #212121;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
 }
 .logo-name:hover{
-    color: #fff
+
 }
 .logo-d{
-    color: #fff;
+    color: #212121;
     text-align: center;
     margin: 15px 0;
 }

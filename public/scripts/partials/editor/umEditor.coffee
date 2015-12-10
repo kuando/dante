@@ -12,7 +12,8 @@ module.exports.init = ()->
       'inserttable', 'deletetable'
     ]],
     initialFrameHeight: 480,
-    autoHeightEnabled: true,
+    autoHeightEnabled: false,
+    autoFloatEnabled:false,
     elementPathEnabled: false,
     textarea: 'item.content'
   })
