@@ -1,29 +1,39 @@
 body {
     position: relative;
     font-family: Helvetica Neue,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
-    background: #5fbeaa;
-}
-.center{
-    width: 100%;
+    background: #f2f2f2;
 }
 .login-box{
-    width: 330px;
+    width: 370px;
     margin: 0 auto;
     background: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0 0 0;
     border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -185px;
+    top: 50%;
+    margin-top: -190px;
 }
-.logo-name{
-    font-weight: normal;
-    color: #212121;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20px;
+.login-box .login-top{
+    padding: 0 20px;
 }
-.logo-name:hover{
-
+.login-box .login-top legend{
+    margin: 0 -20px 20px;
+    padding: 0 20px;
+    display: block;
+    box-sizing: content-box;
+}
+.login-box .login-top legend h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 -1px;
+    line-height: 38px;
+    border-bottom: solid 3px #2ab27b;
+    display: inline-block;
+}
+.login-box form{
+    padding: 0 20px;
 }
 .logo-d{
     color: #212121;
@@ -37,7 +47,6 @@ body {
 }
 
 .login-box input[type="password"] {
-    border: none;
     color: #7f7f7f;
     height: 40px;
     line-height: 40px;
@@ -45,25 +54,10 @@ body {
 }
 
 .login-box input[type="text"] {
-    border: none;
     color: #7f7f7f;
     line-height: 40px;
     height: 40px;
     background: rgba(255,255,255,1);
-}
-.login-box input[type="submit"] {
-    background-color: #72d26e;
-    border: none;
-    color: #fff;
-    height: 40px;
-    padding: 0;
-    outline: none;
-}
-.login-box input[type="submit"]:hover {
-    opacity: 0.9;
-}
-.submit {
-    width: 100%;
 }
 
 .block {
@@ -74,23 +68,11 @@ body {
     opacity: .5;
 }
 
-.login-box input[type="button"] {
-    background-color: #3cacfc;
-    border: none;
-    color: #fff;
-    height: 40px;
-    margin-top: -55px;
-    padding: 0;
-    float: right;
-    width: 100px;
-}
-
 .or {
     text-align: center;
-    color: #fff;
-    margin-bottom: 15px;
-    border-bottom: 1px dashed #fff;
+    color: #212121;
     padding: 10px;
+    border-bottom: 1px dashed #2ab27b;
 }
 
 .big-or {
@@ -99,162 +81,48 @@ body {
 }
 
 .big-san {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
-
-/* Nav-Tabs
-=================================================================== */
-.nav-tabs {
-    border-bottom: none;
+.items{
+    text-align: center;
+    /*background-color: #f0f8ff;*/
+    margin: 0;
+    padding: 10px 0 20px 0;
 }
-.nav-tabs.default.bordered+.tab-content{
-    border-top:0;
-    -webkit-border-radius:0 0 1px 1px;
-    -webkit-background-clip:padding-box;
-    -moz-border-radius:0 0 1px 1px;
-    -moz-background-clip:padding;
-    border-radius:0 0 1px 1px;
-    background-clip:padding-box;
-    margin-bottom:20px;
-    line-height:24px;
-    color:#414142;
-}
-
-.nav-tabs.default > li > a{
-    line-height:0.82857143;
-    border-radius:1px 1px 0 0;
-    color:#fff;
-    border:1px #fff dashed;
-}
-
-.nav-tabs.default > li > a:hover{
-    background: #72d26e;
-    border:1px #72d26e solid;
-    color:#fff;
-}
-
-.nav-tabs.default > li.active > a{
-    background: #72d26e;
-    border:1px #72d26e solid;
-    color:#fff
-}
-
-.nav-tabs.primary.bordered+.tab-content{
-    border:1px solid #337ab7;
-    border-top:0;
-    min-height:161px;
-    -webkit-border-radius:0 0 1px 1px;
-    -webkit-background-clip:padding-box;
-    -moz-border-radius:0 0 1px 1px;
-    -moz-background-clip:padding;
-    border-radius:0 0 1px 1px;
-    background-clip:padding-box;
-    padding:20px;
-    margin-bottom:20px;
-    background-color:#337ab7;
-    line-height:24px;
-    color:#fff
-}
-
-.nav-tabs.primary > li > a{
-    margin-right:2px;
-    line-height:1.42857143;
-    border-radius:1px 1px 0 0;
-    background-color:#60c2e8;
-    color:#FFF
-}
-
-.nav-tabs.primary > li > a:hover{
-    background-color:#286090;
-    color:#fff
-}
-
-.nav-tabs.primary > li.active > a {
-    background-color: #337ab7;
-    border: solid 1px #337ab7;
-    color: #fff
-}
-/* Form
-=================================================================== */
-.form-control {
-    border-radius: 0;
-}
-.c-checkbox,
-.c-radio {
-    margin-right: 4px;
-}
-.c-checkbox *,
-.c-radio * {
-    cursor: pointer;
-}
-.c-checkbox input,
-.c-radio input {
-    opacity: 0;
-    position: absolute;
-    margin-left: 0 !important;
-}
-.c-checkbox span,
-.c-radio span {
-    position: relative;
+.items a.item{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     display: inline-block;
-    vertical-align: top;
-    margin-left: -20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 0;
-    border: 1px solid #ccc;
-    margin-right: 5px;
+    line-height: 43px;
+    font-size: 20px;
 }
-.c-checkbox:hover span,
-.c-radio:hover span {
-    border-color: #72d26e;
+.items .icon-weixin{
+    border: 2px solid #2ab27b;
+    color: #2ab27b;
 }
-.form-inline .c-checkbox span,
-.form-inline .c-radio span {
-    margin-left: 0;
-}
-.c-checkbox.c-checkbox-rounded span,
-.c-radio.c-checkbox-rounded span,
-.c-checkbox.c-radio-rounded span,
-.c-radio.c-radio-rounded span {
-    border-radius: 500px;
-}
-/* override for radio */
-.c-radio span {
-    border-radius: 500px;
-}
-/* the icon */
-.c-checkbox span:before,
-.c-radio span:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    text-align: center !important;
-    font-size: 12px;
-    line-height: 18px;
-    vertical-align: middle;
-}
-/* Checked state */
-input[type=checkbox]:checked + span:before,
-input[type=radio]:checked + span:before {
+.items .icon-weixin:hover{
+    border: 2px solid #2ab27b;
     color: #fff;
-    opacity: 1;
-    transition: color 0.3 ease-out;
+    background: #2ab27b;
 }
-input[type=checkbox]:checked + span,
-input[type=radio]:checked + span {
-    border-color: #72d26e;
-    background-color: #72d26e;
+.items .icon-weibo{
+    border: 2px solid #f25656;
+    color: #f25656;
 }
-/* override for radio */
-input[type=radio]:checked + span {
-    background-color: #fff;
+.items .icon-weibo:hover{
+    border: 2px solid #f25656;
+    color: #fff;
+    background: #f25656;
 }
-input[type=radio]:checked + span:before {
-    color: #72d26e;
+.items .icon-qq{
+    border: 2px solid #439fe0;
+    color: #439fe0;
 }
-
-
+.items .icon-qq:hover{
+    border: 2px solid #439fe0;
+    color: #fff;
+    background: #439fe0;
+}

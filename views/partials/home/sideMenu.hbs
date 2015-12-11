@@ -7,23 +7,23 @@
             </div>
             <ul class="nav nav-pills nav-stacked b-t bg-white">
                 <li {{#if home }} class="active" {{/if}}>
-                    <a href="/home"><span class="glyphicon glyphicon-tags m-r-xs"></span>我的招生易</a>
+                    <a href="/home"><span class="glyphicon glyphicon-home f-default m-r-xs"></span>个人中心</a>
                 </li>
                 <li {{#if following}} class="active" {{/if}}>
-                    <a href="/home/following"><span class="glyphicon glyphicon-thumbs-up m-r-xs"></span>我关注的</a>
+                    <a href="/home/following"><span class="glyphicon glyphicon-thumbs-up f-info m-r-xs"></span>我关注的</a>
                 </li>
                 <li {{#if stars}} class="active" {{/if}}>
-                    <a href="/home/stars"><span class="glyphicon glyphicon-star-empty m-r-xs"></span>我收藏的</a>
+                    <a href="/home/stars"><span class="glyphicon glyphicon-star f-warning m-r-xs"></span>我收藏的</a>
                 </li>
                 <li class="left-menu">
                     <a href="#Setting" data-toggle="collapse">
-                        <span class="glyphicon glyphicon-cog m-r-xs"></span>账户设置
+                        <span class="glyphicon glyphicon-cog f-primary m-r-xs"></span>账户设置
                         <span class="pull-right glyphicon glyphicon-chevron-down"></span>
                     </a>
                     <ul id="Setting" class="nav nav-list collapse secondMenu">
-                        <li {{#if profile}}class="active"{{/if}}><a href="/home/settings/profile"><span class="glyphicon glyphicon-user m-r-xs"></span>个人资料</a></li>
-                        <li {{#if password}}class="active"{{/if}}><a href="/home/settings/password"><span class="glyphicon glyphicon-lock m-r-xs"></span>安全设置</a></li>
-                        <li {{#if bind}}class="active"{{/if}}><a href="/home/settings/bind"><span class="glyphicon glyphicon-retweet m-r-xs"></span>帐号绑定</a></li>
+                        <li {{#if profile}}class="active"{{/if}}><a href="/home/settings/profile"><span class="glyphicon glyphicon-user f-pink m-r-xs"></span>个人资料</a></li>
+                        <li {{#if password}}class="active"{{/if}}><a href="/home/settings/password"><span class="glyphicon glyphicon-lock f-danger m-r-xs"></span>安全设置</a></li>
+                        <li {{#if bind}}class="active"{{/if}}><a href="/home/settings/bind"><span class="glyphicon glyphicon-retweet f-green m-r-xs"></span>帐号绑定</a></li>
                     </ul>
                 </li>
             </ul>

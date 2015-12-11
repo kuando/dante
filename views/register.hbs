@@ -1,35 +1,34 @@
-{{!< loginLayout }}
+{{#content "css" }}
+    <link rel="stylesheet" href="/css/login.css"/>
+{{/content}}
 <div class="row">
-    <div class="center">
         <div class="login-box">
+            <div class="login-top">
+                <legend>
+                    <h2>服务从心开始</h2>
+                </legend>
+            </div>
             <form class="m-t-md" method="post" action="" id="registerForm">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="手机号" name="phone" value="{{user.phone}}">
                 </div>
                 <div class="form-group">
+                    <div class="col-xs-17 no-p">
                     <input class="form-control" type="text" name="mobileCode" id="mobileCode" value=""
                            placeholder="短信验证码">
-                    <input class="btn-code" type="button" name="" id="btn-code" value="点击获取">
+                    </div>
+                    <button class="btn btn-default btn-md m-l-xxs" type="button" name="" id="btn-code">点击获取</button>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="密码 (6-16位)" name="password">
                 </div>
-                <input class="block submit" type="submit" value="注册">
-
-                <div class="form-group">
-                    <div class="checkbox c-checkbox">
-                        <label class="f-white">
-                            <input type="checkbox" value="">
-                            <span class="fa fa-check"></span>我已阅读并同意《招生易服务使用协议》</label>
-                        {{message}}
-                    </div>
-                </div>
+                <button class="btn btn-pink btn-block btn-md" type="submit">注册</button>
+                {{message}}
             </form>
             <div class="or no-b">
-                <p class="f-white">我已有账号，<a href="/auth/login" class="f-blue">我要登录</a></p>
+                <p class="f-black">我已有账号，<a href="/login" class="f-blue">我要登录</a></p>
             </div>
 
         </div>
-    </div>
 </div>
 {{> scripts entry = "register"}}
