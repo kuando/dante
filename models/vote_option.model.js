@@ -10,13 +10,19 @@ module.exports = function (db, DataTypes) {
             primaryKey: true
         },
 
-        score: {
-            type: DataTypes.INTEGER
+        option: {
+            type: DataTypes.STRING(128)
         },
 
-        sequence: {
+        score: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0
+        },
+
+        order: {
             type: DataTypes.INTEGER
         }
+
     }, {
         tableName: 'tb_vote_option'
     });

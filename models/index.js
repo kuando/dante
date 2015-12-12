@@ -8,7 +8,7 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const config = require('../config/config').database;
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
-var daos = {};
+var models = {};
 
 
 fs.readdirSync(path.resolve(__dirname)).forEach(file=> {
@@ -16,13 +16,14 @@ fs.readdirSync(path.resolve(__dirname)).forEach(file=> {
         return;
     }
     var model = sequelize.import(path.join(__dirname, file));
-    daos[model.name] = model;
+    models[model.name] = model;
 });
 
 
-Object.keys(daos).forEach((modelName)=> {
-    if ("associate" in daos[modelName]) {
-        daos[modelName].associate(daos);
+Object.keys(models).forEach((modelName)=> {
+    if ("associate" in models[modelName]) {
+        models[modelName].associate(models);
+        models[modelName].models = models;
     }
 });
 
@@ -32,4 +33,4 @@ Object.keys(daos).forEach((modelName)=> {
 
 console.log('All models loaded');
 
-module.exports = daos;
+module.exports = models;

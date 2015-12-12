@@ -6,5 +6,7 @@ module.exports.init = ()->
     file: 'file_upload'
     preview: 'coverPreview'
     style: 'cover'
-    done: (ret)-> $('#cover').val ret.key
+    done: (ret)->
+      $('#cover').val ret.key
+      $('#file_upload').val ''
   )
