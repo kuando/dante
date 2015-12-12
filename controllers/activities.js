@@ -8,19 +8,25 @@ const activityService = service.activities;
 module.exports = function (router) {
 
     router.get('/', function *() {
-        let themes = yield service.activities.findAllActivityTypes();
+        let themes = yield activityService.findAllActivityTypes();
         yield this.render('activities/themes', {themes: themes});
     });
 
-    router.get('/create', auth.requireLogin, function *() {
+    router.get('/:template/create', auth.requireLogin, function *() {
         let theme = yield activityService.findActivityTypeById(this.query.theme);
-        if (!theme || theme === null) {
+        if (!theme) {
             return this.redirect('/activities');
         }
-        let template = theme.template;
-        this.state.activity = yield activityService.createEmptyActivity(this.state.user, theme.id);
-        yield this.render(`activities/${template}-activity`);
+        let activity = yield activityService.createEmptyActivity(this.state.user, theme);
+        this.state.activity = {id: activity.id};
+        yield this.render(`activities/${theme.template}-activity`);
     });
+
+    router.post('/:id/publish', auth.requireLogin, function *() {
+        let activity = yield activityService.publishActivity(this.params.id, this.request.body);
+        console.log(activity);
+    });
+
 
     router.get('/:id', function *() {
         yield this.render('activities/activity-detail');
