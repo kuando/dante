@@ -26,5 +26,9 @@ module.exports = function (router) {
         yield this.render('activities/activity-detail');
     });
 
+    router.get('/edit/:id', function *() {
+        yield this.render('activities/activity-edit');
+    });
+
     return router;
 };

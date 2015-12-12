@@ -1263,6 +1263,35 @@ a.bg-pink:focus {
     font-size: 16px;
     color: #313131;
 }
+
+.inner .phone{
+    width: 400px;
+    height: 810px;
+    background: rgb(33,33,34);
+    border-radius: 1em;
+    padding: 85px 20px 0 20px;
+}
+.inner .phone .phone-header{
+    width: 360px;
+    height: 25px;
+    background: #ececec;
+}
+.inner .phone .phone-body{
+    width: 360px;
+    height: 615px;
+    background: #fff;
+}
+.inner .phone .phone-footer{
+    text-align: center;
+    padding: 30px;
+}
+.inner .phone .phone-footer .home{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(255,0,0);
+    display: inline-block;
+}
 .inner .inner-footer{
     margin-top: 30px;
 }
