@@ -5,12 +5,16 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="image-group">
-                    <img src="/images/poster-cover.png" id="coverPreview">
+                    {{#if activity.cover}}
+                        <img src="{{path activity.cover}}" id="coverPreview">
+                    {{else}}
+                        <img src="/images/poster-cover.png" id="coverPreview">
+                    {{/if}}
                 </div>
             </div>
             <div class="col-xs-12 m-t-50">
                 <input id="file_upload" type="file" name="file"/>
-                <input name="activity.cover" type="hidden" value=""/>
+                <input name="activity.cover" type="hidden" value="" id="cover"/>
 
                 <a class="open-image">没有准备海报？</a>
 

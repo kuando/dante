@@ -18,10 +18,12 @@ module.exports = function (db, DataTypes) {
         },
 
         cover: {
-            type: DataTypes.STRING(11),
+            type: DataTypes.STRING(128),
             unique: false
         },
-
+        extras: {
+            type: DataTypes.JSON
+        },
         visitedCount: {
             type: DataTypes.INTEGER,
             defaultValue: 0
@@ -60,7 +62,11 @@ module.exports = function (db, DataTypes) {
 
         status: {
             type: DataTypes.INTEGER,
-            defaultValue: 0
+            defaultValue: 0           // 0: 空的活动  1: 草稿状态  2: 发布状态
+        },
+
+        template: {
+            type: DataTypes.STRING
         }
 
     }, {
@@ -91,12 +97,28 @@ module.exports = function (db, DataTypes) {
                     through: models.TopicActivity
                 });
 
-                Activity.hasMany(models.EnrollFields);
+                Activity.hasMany(models.EnrollField);
 
                 Activity.hasOne(models.Post);
 
+                Activity.hasOne(models.Vote);
+
+            }
+        },
+
+        instanceMethods: {
+
+            getItem: function () {
+                let template = this.get('template');
+                return this[`get${template}`]();
+            },
+
+            setItem: function (data) {
+                let template = this.get('template');
+                return this[`set${template}`](data);
             }
         }
     });
+
     return Activity;
 };

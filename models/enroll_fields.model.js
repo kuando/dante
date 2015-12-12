@@ -4,7 +4,7 @@
 
 'use strict';
 module.exports = function (db, DataTypes) {
-    return db.define("EnrollFields", {
+    return db.define("EnrollField", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
