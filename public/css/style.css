@@ -1251,19 +1251,80 @@ a.bg-pink:focus {
     color: #999999;
 }
 .inner .inner-header .cover-img{
-    margin-top: 15px;
+    margin-top: 20px;
     width: 740px;
     overflow: hidden;
 }
-.inner .inner-header .vote{
+.inner .inner-header .enroll{
     margin-top: 20px;
     padding: 10px;
 }
-.inner .inner-header .vote p{
+.inner .inner-header .enroll p{
     font-size: 16px;
     color: #313131;
 }
-
+.inner .dt-vote{
+    margin-top: 20px;
+    padding:0 10px 10px;
+}
+.inner .dt-vote li{
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    min-height: 70px;
+}
+.inner .dt-vote  .jindutiao{
+    overflow: hidden;
+    width: 720px;
+}
+.inner .dt-vote .dt-vote-list-title{
+    display: inline-block;
+    width: 680px;
+    float: left;
+    overflow: hidden;
+    margin: 20px 0 20px 0;
+    text-align: left;
+    _margin-left: 10px;
+}
+.inner .dt-vote .dt-vote-list-title a {
+    color: #333;
+    line-height: 26px;
+    font-size: 18px;
+}
+.inner .dt-vote .dt-vote-list-icon{
+    overflow: hidden;
+    float: right;
+    margin: 20px 0 16px 0;
+}
+.inner .dt-vote .single-selection .dt-vote-list-icon span {
+     display: inline-block;
+     background: url("../images/pop_yesorno.png") no-repeat;
+     background-position: 0 0;
+     width: 30px;
+     height: 30px;
+ }
+.inner .dt-vote .single-selection li.thisOver .dt-vote-list-icon span {
+    background: url("../images/pop_yesorno.png") no-repeat;
+    background-position: 0 -30px;
+}
+.inner .dt-vote .MultiSelect .dt-vote-list-icon span {
+    display: inline-block;
+    background: url("../images/pop_yesorno2.png") no-repeat;
+    background-position: 0 0;
+    width: 30px;
+    height: 30px;
+}
+.inner .dt-vote .MultiSelect li.thisOver .dt-vote-list-icon span {
+    background: url("../images/pop_yesorno2.png") no-repeat;
+    background-position: 0 -30px;
+}
+.inner .dt-vote .dt-vote-bottom{
+    height: 45px;
+}
+.inner .dt-vote .dt-vote-bottom .endTime{
+    width: 300px;
+    margin-top: 10px;
+    text-align: right;
+}
 .inner .phone{
     width: 400px;
     height: 810px;
@@ -2308,7 +2369,7 @@ a.bg-pink:focus {
     border: 1px solid #fb6d9d;
 }
 
-/*定义二级菜单样式*/
+/*left二级菜单样式*/
 .secondMenu li a {
     font-size: 13px;
     color: #4A515B;
